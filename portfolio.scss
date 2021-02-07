@@ -1,3 +1,7 @@
+$desktop: 1200px; //xl
+$laptop: 1024px; //lg
+$tablet: 768px; //md
+$phone: 480px; //sm
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +13,8 @@ html {
 }
 body {
   font-family: "Open Sans", sans-serif;
-  line-height: 1.7;
-  font-size: 1.5rem;
+  line-height: 1.5;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
 }
@@ -40,7 +44,10 @@ ul {
   list-style: none;
   font-size: 1rem;
 }
-
+main {
+  background-color: white;
+  position: relative;
+}
 .intro {
   display: flex;
   flex-direction: column;
@@ -60,8 +67,8 @@ ul {
   transform: translate(-50%);
 }
 .intro__box {
-  background-image: url(/img/fantasy_city_9.jpg);
-  background-size: auto;
+  background-image: url(/img/shape1.png);
+  background-size: cover;
   display: flex;
   width: 100%;
   height: 50%;
@@ -75,6 +82,16 @@ ul {
   background-color: yellowgreen;
   width: 40%;
   height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .text__botleft {
+    position: absolute;
+    color: gray;
+    bottom: 0;
+    transform: translate(0, 5rem);
+  }
 }
 .box__right {
   position: absolute;
@@ -84,7 +101,40 @@ ul {
   background-color: yellow;
   width: 40%;
   height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .text__botright {
+    align-self: flex-start;
+    position: absolute;
+    color: gray;
+    bottom: 0;
+    transform: translate(0, 5rem);
+  }
 }
 .feature {
   display: flex;
+  justify-content: center, space-evenly;
+  background-image: url(/img/shape1.png);
+  background-size: cover;
+}
+.ftr__images,
+.ftr__camera,
+.ftr__heart {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+  color: white;
+}
+.fas {
+  color: white;
+}
+footer {
+  position: absolute;
+  height: 5rem;
+  width: 100vw;
+  background-color: #262933;
+  bottom: 0;
 }

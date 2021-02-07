@@ -12,8 +12,8 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  line-height: 1.7;
-  font-size: 1.5rem;
+  line-height: 1.5;
+  font-size: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,6 +73,11 @@ ul {
   font-size: 1rem;
 }
 
+main {
+  background-color: white;
+  position: relative;
+}
+
 .intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,8 +104,8 @@ ul {
 }
 
 .intro__box {
-  background-image: url(/img/fantasy_city_9.jpg);
-  background-size: auto;
+  background-image: url(/img/shape1.png);
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,6 +123,27 @@ ul {
   background-color: yellowgreen;
   width: 40%;
   height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.box__left .text__botleft {
+  position: absolute;
+  color: gray;
+  bottom: 0;
+  -webkit-transform: translate(0, 5rem);
+          transform: translate(0, 5rem);
 }
 
 .box__right {
@@ -130,11 +156,66 @@ ul {
   background-color: yellow;
   width: 40%;
   height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.box__right .text__botright {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  position: absolute;
+  color: gray;
+  bottom: 0;
+  -webkit-transform: translate(0, 5rem);
+          transform: translate(0, 5rem);
 }
 
 .feature {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center, space-evenly;
+      -ms-flex-pack: center, space-evenly;
+          justify-content: center, space-evenly;
+  background-image: url(/img/shape1.png);
+  background-size: cover;
+}
+
+.ftr__images,
+.ftr__camera,
+.ftr__heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 1rem;
+  color: white;
+}
+
+.fas {
+  color: white;
+}
+
+footer {
+  position: absolute;
+  height: 5rem;
+  width: 100vw;
+  background-color: #262933;
+  bottom: 0;
 }
 /*# sourceMappingURL=portfolio.css.map */
