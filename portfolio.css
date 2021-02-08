@@ -211,11 +211,57 @@ main {
   color: white;
 }
 
-footer {
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%vh;
+  width: 90%vw;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pic.active {
+  width: 100%vw;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+
+.pic {
+  position: relative;
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 5rem;
+  height: 50vh;
+  margin: 0.5rem;
+  border-radius: 5rem;
+  cursor: pointer;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  -webkit-transition: -webkit-box-flex 0.7 ease-in;
+  transition: -webkit-box-flex 0.7 ease-in;
+  transition: flex 0.7 ease-in;
+  transition: flex 0.7 ease-in, -webkit-box-flex 0.7 ease-in, -ms-flex 0.7 ease-in;
+}
+
+.pic h3 {
+  font-size: 3rem;
   position: absolute;
-  height: 5rem;
-  width: 100vw;
-  background-color: #262933;
-  bottom: 0;
+  opacity: 0;
+  bottom: 2rem;
+  left: 2rem;
+  margin: 0;
+}
+
+.pic.active h3 {
+  opacity: 1;
+  color: white;
 }
 /*# sourceMappingURL=portfolio.css.map */
