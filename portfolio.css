@@ -225,13 +225,6 @@ main {
           align-items: center;
 }
 
-.pic.active {
-  width: 100%vw;
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-}
-
 .pic {
   position: relative;
   background-size: auto 100%;
@@ -240,7 +233,7 @@ main {
   width: 5rem;
   height: 50vh;
   margin: 0.5rem;
-  border-radius: 5rem;
+  border-radius: 10rem;
   cursor: pointer;
   -webkit-box-flex: 0.5;
       -ms-flex: 0.5;
@@ -249,19 +242,45 @@ main {
   transition: -webkit-box-flex 0.7 ease-in;
   transition: flex 0.7 ease-in;
   transition: flex 0.7 ease-in, -webkit-box-flex 0.7 ease-in, -ms-flex 0.7 ease-in;
+  overflow: hidden;
 }
 
 .pic h3 {
   font-size: 3rem;
   position: absolute;
-  opacity: 0;
-  bottom: 2rem;
-  left: 2rem;
   margin: 0;
+  opacity: 0;
+  bottom: 10%;
+  left: 40%;
+}
+
+.pic.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
 }
 
 .pic.active h3 {
   opacity: 1;
   color: white;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+@media screen and (max-width: 576px) {
+  .gallery {
+    width: 100vw;
+  }
+  .pic:nth-of-type(5),
+  .pic:nth-of-type(6),
+  .pic:nth-of-type(7) {
+    display: none;
+  }
+  .pic h3 {
+    font-size: 2rem;
+    left: 38%;
+  }
 }
 /*# sourceMappingURL=portfolio.css.map */

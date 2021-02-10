@@ -1,0 +1,116 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url(/img/pic10.jpg);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 1rem;
+  animation-name: moveDown;
+  animation-duration: 1s;
+}
+.title--small {
+  font-size: 2rem;
+}
+.btn--blue {
+  margin-top: 2rem;
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  background-image: linear-gradient(to bottom, white, blue);
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 2rem;
+  backface-visibility: hidden;
+  transition: all 0.3 ease-in;
+  animation: moveUp 1s ease-in;
+  animation-delay: 0.5s;
+  position: relative;
+  z-index: 100;
+  animation-fill-mode: backwards;
+}
+.btn--blue:hover {
+  transform: translateY(-5%);
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+}
+.btn--blue::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-image: linear-gradient(to bottom, white, blue);
+}
+.btn--blue:hover::after {
+  transform: scale(1.5);
+  opacity: 0;
+  transition: 0.4s;
+}
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translatey(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@media screen and (min-width: $lg) {
+  .title {
+    font-size: 10rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+  }
+  .title--small {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .btn--blue {
+    font-size: 3rem;
+    border-radius: 5rem;
+  }
+}

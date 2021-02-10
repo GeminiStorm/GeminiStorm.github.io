@@ -1,7 +1,31 @@
-$desktop: 1200px; //xl
-$laptop: 1024px; //lg
-$tablet: 768px; //md
-$phone: 480px; //sm
+// over 4 grid $grid-breakpoints: (
+//   xs: 0,
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+// );
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1140px,
+//   xxl: 1320px
+// );
+
+// under 4 grid: $grid-breakpoints: (
+//   xs: 0,
+//   sm: 480px,
+//   md: 768px,
+//   lg: 1024px
+// );
+
+// $container-max-widths: (
+//   sm: 420px,
+//   md: 720px,
+//   lg: 960px
+// );
 * {
   margin: 0;
   padding: 0;
@@ -145,10 +169,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
 }
-.pic.active {
-  width: 100%vw;
-  flex: 5;
-}
+
 .pic {
   position: relative;
   background-size: auto 100%;
@@ -157,20 +178,40 @@ main {
   width: 5rem;
   height: 50vh;
   margin: 0.5rem;
-  border-radius: 5rem;
+  border-radius: 10rem;
   cursor: pointer;
   flex: 0.5;
   transition: flex 0.7 ease-in;
+  overflow: hidden;
 }
 .pic h3 {
   font-size: 3rem;
   position: absolute;
-  opacity: 0;
-  bottom: 2rem;
-  left: 2rem;
   margin: 0;
+  opacity: 0;
+  bottom: 10%;
+  left: 40%;
+}
+.pic.active {
+  flex: 5;
+  transition-duration: 1s;
 }
 .pic.active h3 {
   opacity: 1;
   color: white;
+  transition-duration: 0.5s;
+}
+@media screen and (max-width: $sm) {
+  .gallery {
+    width: 100vw;
+  }
+  .pic:nth-of-type(5),
+  .pic:nth-of-type(6),
+  .pic:nth-of-type(7) {
+    display: none;
+  }
+  .pic h3 {
+    font-size: 2rem;
+    left: 38%;
+  }
 }
