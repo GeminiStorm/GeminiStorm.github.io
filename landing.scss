@@ -3,6 +3,7 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
+$bgcl: #5bc8e6;
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +13,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;
   font-size: 1rem;
 }
@@ -20,7 +21,7 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-image: url(/img/pic10.jpg);
+  background-image: url(/img/pic10doc.png);
   color: white;
   display: flex;
   flex-direction: column;
@@ -28,6 +29,8 @@ body {
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
+  animation: shake 3s linear;
+  animation-direction: alternate;
 }
 .title {
   font-size: 3rem;
@@ -35,16 +38,20 @@ body {
   letter-spacing: 1rem;
   animation-name: moveDown;
   animation-duration: 1s;
+  text-transform: uppercase;
 }
 .title--small {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .btn--blue {
   margin-top: 2rem;
   list-style: none;
   text-decoration: none;
-  color: black;
-  background-image: linear-gradient(to bottom, white, blue);
+  color: #084c61;
+  font-weight: 400;
+  // background-color: $bgcl;
+  text-transform: uppercase;
+  // background-image: linear-gradient(to bottom, white, blue);
   padding: 1rem 2rem;
   cursor: pointer;
   border-radius: 2rem;
@@ -72,7 +79,8 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: linear-gradient(to bottom, white, blue);
+  background-color: $bgcl;
+  // background-image: linear-gradient(to bottom, white, blue);
 }
 .btn--blue:hover::after {
   transform: scale(1.5);
@@ -99,15 +107,54 @@ body {
     transform: translate(0);
   }
 }
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
 @media screen and (min-width: $lg) {
+  .container {
+    background-image: url(/img/pic10.jpg);
+  }
   .title {
     font-size: 10rem;
     font-weight: 400;
     letter-spacing: 2rem;
   }
-  .title--small {
-    font-size: 4rem;
+  h3.title--small {
+    font-size: 6rem;
     text-align: center;
+    font-weight: 200;
   }
   .btn--blue {
     font-size: 3rem;
