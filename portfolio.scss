@@ -91,7 +91,7 @@ main {
   transform: translate(-50%);
 }
 .intro__box {
-  background-image: url(/img/shape1.png);
+  background-image: url(./img/shape1.png);
   background-size: cover;
   display: flex;
   width: 100%;
@@ -140,7 +140,7 @@ main {
 .feature {
   display: flex;
   justify-content: center, space-evenly;
-  background-image: url(/img/shape1.png);
+  background-image: url(./img/shape1.png);
   background-size: cover;
 }
 .ftr__images,

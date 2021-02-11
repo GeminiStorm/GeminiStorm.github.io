@@ -104,7 +104,7 @@ main {
 }
 
 .intro__box {
-  background-image: url(/img/shape1.png);
+  background-image: url(./img/shape1.png);
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,7 +188,7 @@ main {
   -webkit-box-pack: center, space-evenly;
       -ms-flex-pack: center, space-evenly;
           justify-content: center, space-evenly;
-  background-image: url(/img/shape1.png);
+  background-image: url(./img/shape1.png);
   background-size: cover;
 }
 

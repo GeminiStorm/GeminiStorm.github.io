@@ -19,8 +19,7 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-image: url(/img/pic10doc.png);
-  color: white;
+  background-image: url(./img/pic10doc.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,10 +35,11 @@ body {
           align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  -webkit-animation: shake 3s linear;
-          animation: shake 3s linear;
+  -webkit-animation: shake 2s linear;
+          animation: shake 2s linear;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+  color: white;
 }
 
 .title {
@@ -259,7 +259,7 @@ body {
 
 @media screen and (min-width: 992px) {
   .container {
-    background-image: url(/img/pic10.jpg);
+    background-image: url(./img/pic10.jpg);
   }
   .title {
     font-size: 10rem;
