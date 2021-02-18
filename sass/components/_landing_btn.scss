@@ -1,0 +1,41 @@
+.btn--blue {
+  margin-top: 2rem;
+  list-style: none;
+  text-decoration: none;
+  color: $textcolor;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-size: 2rem;
+  backface-visibility: hidden;
+  transition: all 0.3 ease-in;
+  animation: moveUp 1s ease-in;
+  animation-delay: 0.5s;
+  position: relative;
+  z-index: 100;
+  animation-fill-mode: backwards;
+  &:hover {
+    transform: translateY(-5%);
+    color: white;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    &::after {
+      transform: scale(1.5);
+      opacity: 0;
+      transition: 0.4s;
+    }
+  }
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: $bgcolor;
+  }
+}
