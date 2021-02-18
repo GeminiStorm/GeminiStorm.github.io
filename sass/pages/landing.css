@@ -1,8 +1,10 @@
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 html {
@@ -257,65 +259,46 @@ body {
   font-size: 1.5rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 @media screen and (min-width: 768px) {
-  .container {
-    background-image: url(../../img/pic10doc.png);
-  }
-  .title {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: 1.5rem;
-  }
-  h3.title--small {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 200;
-    letter-spacing: 1.7rem;
-  }
-  .btn--blue {
-    font-size: 2rem;
-    border-radius: 5rem;
+  html {
+    font-size: 80%;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .container {
-    background-image: url(../../img/pic10doc.png);
-  }
-  .title {
-    font-size: 8rem;
-    font-weight: 300;
-    letter-spacing: 1.5rem;
-  }
-  h3.title--small {
-    font-size: 4rem;
-    text-align: center;
-    font-weight: 200;
-    letter-spacing: 2rem;
-  }
-  .btn--blue {
-    font-size: 2.5rem;
-    border-radius: 5rem;
+  html {
+    font-size: 100%;
   }
 }
 
 @media screen and (min-width: 1200px) {
+  html {
+    font-size: 120%;
+  }
   .container {
     background-image: url(../../img/pic10.jpg);
   }
   .title {
-    font-size: 10rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-width: 1400px) {
+  html {
+    font-size: 140%;
+  }
+  .container {
+    background-image: url(../../img/pic10.jpg);
+  }
+  .title {
     font-weight: 400;
-    letter-spacing: 2rem;
-  }
-  h3.title--small {
-    font-size: 6rem;
-    text-align: center;
-    font-weight: 200;
-  }
-  .btn--blue {
-    font-size: 3rem;
-    border-radius: 5rem;
   }
 }
 /*# sourceMappingURL=landing.css.map */

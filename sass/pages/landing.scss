@@ -1,67 +1,107 @@
+@import "../abstract/variables";
 @import "../base/base";
 @import "../base/landing_typing";
-@import "../abstract/variables";
 @import "../base/landing_animation";
 @import "../components/landing_btn";
 @import "../components/landing_title";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 @media screen and (min-width: $sm) {
 }
-@media screen and (min-width: $md) {
-  .container {
-    background-image: url(../../img/pic10doc.png);
-  }
-  .title {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: 1.5rem;
-  }
-  h3.title--small {
-    font-size: 3rem;
-    text-align: center;
-    font-weight: 200;
-    letter-spacing: 1.7rem;
-  }
-  .btn--blue {
-    font-size: 2rem;
-    border-radius: 5rem;
+@include respond(md) {
+  html {
+    font-size: 80%;
   }
 }
-@media screen and (min-width: $lg) {
-  .container {
-    background-image: url(../../img/pic10doc.png);
-  }
-  .title {
-    font-size: 8rem;
-    font-weight: 300;
-    letter-spacing: 1.5rem;
-  }
-  h3.title--small {
-    font-size: 4rem;
-    text-align: center;
-    font-weight: 200;
-    letter-spacing: 2rem;
-  }
-  .btn--blue {
-    font-size: 2.5rem;
-    border-radius: 5rem;
+@include respond(lg) {
+  html {
+    font-size: 100%;
   }
 }
-@media screen and (min-width: $xl) {
+@include respond(xl) {
+  html {
+    font-size: 120%;
+  }
   .container {
     background-image: url(../../img/pic10.jpg);
   }
   .title {
-    font-size: 10rem;
-    font-weight: 400;
-    letter-spacing: 2rem;
+    font-weight: 300;
   }
-  h3.title--small {
-    font-size: 6rem;
-    text-align: center;
-    font-weight: 200;
-  }
-  .btn--blue {
-    font-size: 3rem;
-    border-radius: 5rem;
+  @include respond(xxl) {
+    html {
+      font-size: 140%;
+    }
+    .container {
+      background-image: url(../../img/pic10.jpg);
+    }
+    .title {
+      font-weight: 400;
+    }
   }
 }
+// .container {
+//   background-image: url(../../img/pic10doc.png);
+// }
+// @media screen and (min-width: $md) {
+//   .container {
+//     background-image: url(../../img/pic10doc.png);
+//   }
+//   .title {
+//     font-size: 6rem;
+//     font-weight: 300;
+//     letter-spacing: 1.5rem;
+//   }
+//   h3.title--small {
+//     font-size: 3rem;
+//     text-align: center;
+//     font-weight: 200;
+//     letter-spacing: 1.7rem;
+//   }
+//   .btn--blue {
+//     font-size: 2rem;
+//     border-radius: 5rem;
+//   }
+// }
+// @media screen and (min-width: $lg) {
+//   .container {
+//     background-image: url(../../img/pic10doc.png);
+//   }
+//   .title {
+//     font-size: 8rem;
+//     font-weight: 300;
+//     letter-spacing: 1.5rem;
+//   }
+//   h3.title--small {
+//     font-size: 4rem;
+//     text-align: center;
+//     font-weight: 200;
+//     letter-spacing: 2rem;
+//   }
+//   .btn--blue {
+//     font-size: 2.5rem;
+//     border-radius: 5rem;
+//   }
+// }
+// @media screen and (min-width: $xl) {
+//   .container {
+//     background-image: url(../../img/pic10.jpg);
+//   }
+//   .title {
+//     font-size: 10rem;
+//     font-weight: 400;
+//     letter-spacing: 2rem;
+//   }
+//   h3.title--small {
+//     font-size: 6rem;
+//     text-align: center;
+//     font-weight: 200;
+//   }
+//   .btn--blue {
+//     font-size: 3rem;
+//     border-radius: 5rem;
+//   }
+//
