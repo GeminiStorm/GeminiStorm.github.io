@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href = "./portfolio.css">
-    <link rel="stylesheet" href = "/fontawesome-free-5.15.2-web/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href = "fontawesome-free-5.15.2-web\css\all.min.css">
+    <link rel="stylesheet" type="text/css" href = "./sass/portfolio.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
@@ -24,16 +24,30 @@
     </header>
     <main>
         <div class="intro">
-            <div class="intro__text">Web Developer from Đông Lào</div>
-            <div class="intro__box">
-                <div class="box__left">
-                    <div class="text__left"><p>Media group</p></div>
-                    <div class="text__botleft"><p>Looking for a fresh new design</p></div>
-                </div>
-                <div class="box__right">
-                    <div class="text__right"><p>Image</p></div>
-                    <div class="text__botright"><p>I provide awesome website design packages starting from as low </p></div>
-                </div>
+            <div class="intro__title">
+                <p>Web developer from Đông Lào</p>
+            </div>
+            <div class="intro__avt">
+                <picture>
+                    <source media="(max-width:605px)" srcset="/img/avt-605x454.jpg">
+                    <source media="(max-width:2016px)" srcset="/img/avt-2000x1500.jpg">
+                    <img id="avt" src="/img/avt-4000x3000.jpg" alt="Dang Khoa">
+                 </picture>
+            </div>
+            <div class="intro__content">
+                <p class="content__title">Who I Am?</p>
+                <ul class="content__info">
+                    <li>Trần Lê Đăng Khoa</li>
+                    <li>DOB:20/03/1991</li>
+                    <li>Address: Phan Chu Trinh, Quận Bình Thạnh, HCM</li>
+                    <li>Phone: 0766592939</li>
+                    <li>Email: tranledangkhoa91@gmail.com</li>
+                </ul>
+                <br>
+                <p class="content__more"> Although I do not have much experience as a developer,
+                    but with good mindset, ability to search and solve problems,
+                    plus a decent English skill, I can endeavor to develop and
+                    complete my assigned tasks well.</p>
             </div>
         </div>
         <div class="feature">

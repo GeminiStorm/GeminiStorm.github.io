@@ -1,34 +1,3 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-html {
-  font-size: 62.5%;
-  background-color: white;
-}
-
-body {
-  font-family: "Open Sans", sans-serif;
-  line-height: 1.5;
-  font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,11 +48,6 @@ ul {
   font-size: 1rem;
 }
 
-main {
-  background-color: white;
-  position: relative;
-}
-
 .intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -93,75 +57,47 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100vw;
-  height: 50vh;
-  position: relative;
+  height: 80vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.intro__text {
-  width: 100%;
-  height: 5rem;
-  text-align: center;
-  position: absolute;
+.intro__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 2rem;
   color: white;
-  top: 10%;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  height: 4vh;
 }
 
-.intro__box {
-  background-image: url(./img/shape1.png);
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  height: 50%;
+.intro__avt {
+  width: auto;
 }
 
-.box__left {
-  position: absolute;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  top: 25%;
-  left: 10%;
-  background-color: yellowgreen;
-  width: 40%;
-  height: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+.intro__avt #avt {
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.box__left .text__botleft {
-  position: absolute;
-  color: gray;
-  bottom: 0;
-  -webkit-transform: translate(0, 5rem);
-          transform: translate(0, 5rem);
+.intro__content {
+  color: white;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 
-.box__right {
-  position: absolute;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  top: 25%;
-  right: 10%;
-  background-color: yellow;
-  width: 40%;
-  height: 50%;
+.intro__content .content__title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.intro__content .content__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -169,32 +105,20 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-}
-
-.box__right .text__botright {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  position: absolute;
-  color: gray;
-  bottom: 0;
-  -webkit-transform: translate(0, 5rem);
-          transform: translate(0, 5rem);
 }
 
 .feature {
+  width: 100vw;
+  height: 25vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center, space-evenly;
       -ms-flex-pack: center, space-evenly;
           justify-content: center, space-evenly;
-  background-image: url(./img/shape1.png);
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   background-size: cover;
 }
 
@@ -215,6 +139,44 @@ main {
 
 .fas {
   color: white;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../img/pic10doc.png);
+  background-size: cover;
+  font-family: "Raleway", Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .gallery {
