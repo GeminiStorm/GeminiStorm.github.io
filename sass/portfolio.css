@@ -6,10 +6,11 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: #2c3347;
+  width: 100vw;
 }
 
 .logo {
+  width: 100vw;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -22,6 +23,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: none;
+  z-index: 1;
 }
 
 .logo__text {
@@ -29,29 +32,72 @@ header {
   font-size: 2rem;
 }
 
-ul {
+.dropdown {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 1000;
 }
 
-.nav {
-  margin: 1rem;
-  color: #5e6068;
-  list-style: none;
-  font-size: 1rem;
+.dropdown .nav__icon {
+  z-index: 10;
+  position: fixed;
+  right: 1rem;
+}
+
+.dropdown .nav__icon:hover {
+  cursor: pointer;
+}
+
+.dropdown .navigation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+}
+
+.dropdown .navigation .nav__list {
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(#a0c4ff, #9bf6ff);
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.dropdown .nav {
+  text-decoration: none;
+  font-size: 5rem;
+  color: white;
+}
+
+.dropdown li {
+  list-style: none;
+}
+
+.hidden {
+  display: none;
 }
 
 .intro {

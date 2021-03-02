@@ -68,7 +68,7 @@ main {
 }
 .pic.active h3 {
   opacity: 1;
-  color: white;
+  color: $textcolor;
   transition-duration: 0.5s;
 }
 @media screen and (max-width: $sm) {
