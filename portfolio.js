@@ -13,7 +13,12 @@ const removeActive = function (pic) {
 };
 //click event cho dropdown menu
 const navIcon = document.querySelector(".nav__icon");
-const navi = document.querySelector(".navigation");
+const navToggle = document.querySelector(".navigation");
+function changeIcon() {
+  navIcon.classList.toggle("fa-bars");
+  navIcon.classList.toggle("fa-times");
+}
 navIcon.addEventListener("click", () => {
-  navi.classList.toggle("hidden");
+  navToggle.classList.toggle("hidden");
+  changeIcon();
 });
