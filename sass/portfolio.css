@@ -91,6 +91,7 @@ header {
 .dropdown .hidden {
   opacity: 0;
   height: 0px;
+  background-position: top right;
 }
 
 .dropdown .nav {
@@ -217,7 +218,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-image: url(../img/pic10doc.png);
+  background: url(../img/pic10doc.png) no-repeat;
   background-size: cover;
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;
@@ -232,78 +233,5 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%vh;
-  width: 90%vw;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.pic {
-  position: relative;
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 5rem;
-  height: 50vh;
-  margin: 0.5rem;
-  border-radius: 10rem;
-  cursor: pointer;
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  -webkit-transition: -webkit-box-flex 0.7 ease-in;
-  transition: -webkit-box-flex 0.7 ease-in;
-  transition: flex 0.7 ease-in;
-  transition: flex 0.7 ease-in, -webkit-box-flex 0.7 ease-in, -ms-flex 0.7 ease-in;
-  overflow: hidden;
-}
-
-.pic h3 {
-  font-size: 3rem;
-  position: absolute;
-  margin: 0;
-  opacity: 0;
-  bottom: 10%;
-  left: 40%;
-}
-
-.pic.active {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-}
-
-.pic.active h3 {
-  opacity: 1;
-  color: white;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-@media screen and (max-width: 576px) {
-  .gallery {
-    width: 100vw;
-  }
-  .pic:nth-of-type(5),
-  .pic:nth-of-type(6),
-  .pic:nth-of-type(7) {
-    display: none;
-  }
-  .pic h3 {
-    font-size: 2rem;
-    left: 38%;
-  }
 }
 /*# sourceMappingURL=portfolio.css.map */

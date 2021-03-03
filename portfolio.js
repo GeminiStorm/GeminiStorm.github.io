@@ -1,16 +1,17 @@
 "use strict";
-const activePics = document.querySelectorAll(".pic");
-activePics.forEach((pic) => {
-  pic.addEventListener("click", () => {
-    removeActive();
-    pic.classList.add("active");
-  });
-});
-const removeActive = function (pic) {
-  activePics.forEach((pic) => {
-    pic.classList.remove("active");
-  });
-};
+// const pic = document.querySelector(".pic");
+// const activePics = document.querySelectorAll(".pic");
+// activePics.forEach((pic) => {
+//   pic.addEventListener("click", () => {
+//     removeActive();
+//     pic.classList.add("active");
+//   });
+// });
+// const removeActive = function (pic) {
+//   activePics.forEach((pic) => {
+//     pic.classList.remove("active");
+//   });
+// };
 //click event cho dropdown menu
 const navIcon = document.querySelector(".nav__icon");
 const navToggle = document.querySelector(".navigation");

@@ -1,5 +1,5 @@
 @import "./abstract/variables";
-@import "./layout/portfolio_nav";
+@import "./layout/portfolio_header";
 @import "./layout/portfolio_section_1";
 *,
 *::after,
@@ -14,7 +14,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  background-image: url(../img/pic10doc.png);
+  background:: url(../img/pic10doc.png) no-repeat;
   background-size: cover;
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;
@@ -23,65 +23,4 @@ body {
 main {
   display: flex;
   flex-direction: column;
-}
-
-// footer {
-//   position: absolute;
-//   height: 5rem;
-//   width: 100vw;
-//   background-color: #262933;
-//   bottom: 0;
-// }
-.gallery {
-  display: flex;
-  height: 100%vh;
-  width: 90%vw;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.pic {
-  position: relative;
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 5rem;
-  height: 50vh;
-  margin: 0.5rem;
-  border-radius: 10rem;
-  cursor: pointer;
-  flex: 0.5;
-  transition: flex 0.7 ease-in;
-  overflow: hidden;
-}
-.pic h3 {
-  font-size: 3rem;
-  position: absolute;
-  margin: 0;
-  opacity: 0;
-  bottom: 10%;
-  left: 40%;
-}
-.pic.active {
-  flex: 5;
-  transition-duration: 1s;
-}
-.pic.active h3 {
-  opacity: 1;
-  color: $textcolor;
-  transition-duration: 0.5s;
-}
-@media screen and (max-width: $sm) {
-  .gallery {
-    width: 100vw;
-  }
-  .pic:nth-of-type(5),
-  .pic:nth-of-type(6),
-  .pic:nth-of-type(7) {
-    display: none;
-  }
-  .pic h3 {
-    font-size: 2rem;
-    left: 38%;
-  }
 }
