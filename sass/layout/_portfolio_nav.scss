@@ -16,6 +16,7 @@ header {
   color: $textcolor;
   font-size: 2rem;
 }
+//dropdown menu
 .dropdown {
   display: flex;
   flex-direction: column;
@@ -49,6 +50,11 @@ header {
       transition: all 0.2s;
     }
   }
+  //display navigation bar
+  .hidden {
+    opacity: 0;
+    height: 0px;
+  }
   .nav {
     text-decoration: none;
     font-size: 5rem;
@@ -57,8 +63,4 @@ header {
   li {
     list-style: none;
   }
-}
-.hidden {
-  opacity: 0;
-  height: 0px;
 }

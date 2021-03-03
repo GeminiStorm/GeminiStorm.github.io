@@ -88,6 +88,11 @@ header {
   transition: all 0.2s;
 }
 
+.dropdown .hidden {
+  opacity: 0;
+  height: 0px;
+}
+
 .dropdown .nav {
   text-decoration: none;
   font-size: 5rem;
@@ -96,11 +101,6 @@ header {
 
 .dropdown li {
   list-style: none;
-}
-
-.hidden {
-  opacity: 0;
-  height: 0px;
 }
 
 .intro {
