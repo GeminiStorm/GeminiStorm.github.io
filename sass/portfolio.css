@@ -54,6 +54,8 @@ header {
 }
 
 .dropdown .navigation {
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -97,7 +99,8 @@ header {
 }
 
 .hidden {
-  display: none;
+  opacity: 0;
+  height: 0px;
 }
 
 .intro {
