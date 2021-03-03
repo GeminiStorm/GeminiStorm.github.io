@@ -163,6 +163,14 @@ header {
           flex-direction: column;
 }
 
+.intro__content .btn__more {
+  cursor: pointer;
+}
+
+.intro__content #more {
+  display: none;
+}
+
 .feature {
   width: 100vw;
   height: 25vh;
@@ -223,6 +231,7 @@ body {
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;
   font-size: 1rem;
+  height: 500vh;
 }
 
 main {

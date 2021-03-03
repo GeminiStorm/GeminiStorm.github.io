@@ -31,6 +31,12 @@
       display: flex;
       flex-direction: column;
     }
+    .btn__more {
+      cursor: pointer;
+    }
+    #more {
+      display: none;
+    }
   }
 }
 
