@@ -51,6 +51,18 @@ header {
       align-items: center;
       justify-content: center;
       transition: all 0.2s;
+      .nav__home {
+        @include navTransition;
+      }
+      .nav__about {
+        @include navTransition;
+      }
+      .nav__skill {
+        @include navTransition;
+      }
+      .nav__contact {
+        @include navTransition;
+      }
     }
   }
   //display navigation bar

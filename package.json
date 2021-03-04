@@ -1,0 +1,22 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "landing.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/portfolio.scss sass/portfolio.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeminiStorm/GeminiStorm.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeminiStorm/GeminiStorm.github.io/issues"
+  },
+  "homepage": "https://github.com/GeminiStorm/GeminiStorm.github.io#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

@@ -92,6 +92,58 @@ header {
   transition: all 0.2s;
 }
 
+.dropdown .navigation .nav__list .nav__home {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 230%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dropdown .navigation .nav__list .nav__home:hover {
+  background-position: 100%;
+  color: skyblue;
+}
+
+.dropdown .navigation .nav__list .nav__about {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 230%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dropdown .navigation .nav__list .nav__about:hover {
+  background-position: 100%;
+  color: skyblue;
+}
+
+.dropdown .navigation .nav__list .nav__skill {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 230%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dropdown .navigation .nav__list .nav__skill:hover {
+  background-position: 100%;
+  color: skyblue;
+}
+
+.dropdown .navigation .nav__list .nav__contact {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
+  background-size: 230%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dropdown .navigation .nav__list .nav__contact:hover {
+  background-position: 100%;
+  color: skyblue;
+}
+
 .dropdown .hidden {
   opacity: 0;
   height: 0px;
