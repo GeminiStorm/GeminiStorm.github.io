@@ -1,9 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
 .intro {
   display: flex;
   flex-direction: column;
   width: 100vw;
-  height: 80vh;
+  height: 75vh;
   align-items: center;
+  position: relative;
   &__title {
     display: flex;
     align-items: flex-start;
@@ -39,24 +44,32 @@
     }
   }
 }
-
-.feature {
+.skill {
   width: 100vw;
-  height: 25vh;
-  display: flex;
-  justify-content: center, space-evenly;
-  align-items: baseline;
-  background-size: cover;
-}
-.ftr__images,
-.ftr__camera,
-.ftr__heart {
+  height: 20vh;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  margin: 1rem;
-  color: $textcolor;
-}
-.fas {
-  color: $textcolor;
+  align-items: center;
+  justify-content: center;
+  .skill__title {
+    height: 5vh;
+    font-size: 2rem;
+    color: white;
+  }
+  .skill__primary {
+    width: 100vw;
+    height: 15vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    .skill__design {
+      @include skill;
+    }
+    .skill__dev {
+      @include skill;
+    }
+    .skill__mobile {
+      @include skill;
+    }
+  }
 }

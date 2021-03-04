@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href = "fontawesome-free-5.15.2-web\css\all.min.css">
-    <link rel="stylesheet" type="text/css" href = "./sass/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome-free-5.15.2-web\css\all.min.css">
+    <link rel="stylesheet" type="text/css" href="./sass/portfolio.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
     <title>Portfolio</title>
+
 <body>
     <header>
-        <div class = "logo">              
-            <h3 class="logo__text">Made by <span><i class="fab fa-korvue" style = "color: white;"></i></span>hoa</h3>
+        <div class="logo">
+            <h3 class="logo__text">Made by <span><i class="fab fa-korvue" style="color: white;"></i></span>hoa</h3>
         </div>
-    <div class="dropdown">
-        <i class="nav__icon fas fa-bars fa-3x"
-        ></i>
-        <div class="navigation hidden">
-            <ul class="nav__list ">
-             <li><a href="#"class=" nav nav__home">Home</a></li> 
-                <li><a href="#"class="nav nav__about">About</a></li> 
-                <li><a href="#"class="nav nav__skill">Skill</a></li> 
-                <li><a href="#"class="nav nav__contact">Contact</a></li> 
-            </ul>
+        <div class="dropdown">
+            <i class="nav__icon fas fa-bars fa-3x"></i>
+            <div class="navigation hidden">
+                <ul class="nav__list ">
+                    <li><a href="#" class=" nav nav__home">Home</a></li>
+                    <li><a href="#" class="nav nav__about">About</a></li>
+                    <li><a href="#" class="nav nav__skill">Skill</a></li>
+                    <li><a href="#" class="nav nav__contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
     </header>
     <main>
         <div class="intro">
@@ -38,41 +39,54 @@
                     <source media="(max-width:605px)" srcset="/img/avt-605x454.jpg">
                     <source media="(max-width:2016px)" srcset="/img/avt-2000x1500.jpg">
                     <img id="avt" src="/img/avt-4000x3000.jpg" alt="Dang Khoa">
-                 </picture>
+                </picture>
             </div>
             <div class="intro__content">
                 <p class="content__title">Who I Am?</p>
                 <ul class="content__info">
                     <li>Trần Lê Đăng Khoa</li>
-                    <li><i class="fas fa-birthday-cake"></i>  DOB:20/03/1991</li>
+                    <li><i class="fas fa-birthday-cake"></i> DOB:20/03/1991</li>
                     <li><i class="fas fa-address-card"></i> Address: Phan Chu Trinh, Quận Bình Thạnh, HCM</li>
-                    <li><i class="fas fa-mobile"></i>   Phone: 0766592939</li>
+                    <li><i class="fas fa-mobile"></i> Phone: 0766592939</li>
                     <li><i class="fas fa-envelope"></i> Email: tranledangkhoa91@gmail.com</li>
                 </ul>
-                    <div> <h3 class="btn__more">Read more...</h3>
-                       <p id="more"> I have ability to search and solve problems, plus a decent English skill, I can endeavor to develop and
-                    complete my assigned tasks well.</p></div>
+                <div>
+                    <h3 class="btn__more">Read more...</h3>
+                    <p id="more"> I have ability to search and solve problems, plus a decent English skill, I can
+                        endeavor to develop and
+                        complete my assigned tasks well.</p>
+                </div>
             </div>
         </div>
-        <!-- <div class="feature">
-            <div class="ftr__images">
-                <i class="fas fa-2x fa-images"></i>
-                <div class="ftr feature__title"><h4>Beautiful Design</h4></div>
-                <div class="ftr feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, tempore?</div>
+        <div class="skill">
+            <div class="skill__title">My Working Skill</div>
+            <div class="skill__primary">
+                <div class="skill__design">
+                    <i class="fas fa-2x fa-palette"></i>
+                    <div class="skill__name">
+                        <h4>Web Design</h4>
+                    </div>
+                    <div class="skill__explain">Design Your Website!</div>
+                </div>
+                <div class="skill__dev">
+                    <i class="fas fa-2x fa-globe"></i>
+                    <div class="skill__name">
+                        <h4>Develope Your Website</h4>
+                    </div>
+                    <div class="skill__explain">Make Your Website Online!</div>
+                </div>
+                <div class="skill__mobile">
+                    <i class="fas fa-2x fa-mobile"></i>
+                    <div class="skill__name">
+                        <h4>Mobile Design</h4>
+                    </div>
+                    <div class="skill__explain">Mobile Responsive</div>
+                </div>
             </div>
-            <div class="ftr__camera">
-                <i class="fas fa-2x fa-camera"></i>
-                <div class="ftr feature__title"><h4>Build to Perfection</h4></div>
-                <div class="ftr feature__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque, quo!</div>
-            </div>
-            <div class="ftr__heart">
-                <i class="fas fa-2x fa-heart"></i>
-                <div class="ftr feature__title"><h4>Satisfaction Guaranteed</h4></div>
-                <div class="ftr feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, consequuntur!</div>
-            </div>  
     </main>
-    <footer>copyright</footer> -->
+    <footer>copyright</footer>
 </body>
-    
-  <script src="./portfolio.js"></script>
+
+<script src="./portfolio.js"></script>
+
 </html>

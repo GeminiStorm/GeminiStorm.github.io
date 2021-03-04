@@ -2,6 +2,7 @@ header {
   display: flex;
   flex-direction: row;
   width: 100vw;
+  height: 5vh;
 }
 .logo {
   width: 100vw;
@@ -22,6 +23,7 @@ header {
   flex-direction: column;
   z-index: 1000;
   .nav__icon {
+    color: white;
     z-index: 10;
     height: 2rem;
     width: 2rem;

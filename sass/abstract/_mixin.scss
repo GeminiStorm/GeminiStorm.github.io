@@ -13,3 +13,14 @@
     color: skyblue;
   }
 }
+@mixin skill {
+  height: 10vh;
+  width: 100vw;
+  bottom: 0;
+  font-size: 1.5rem;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
