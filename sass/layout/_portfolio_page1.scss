@@ -2,13 +2,14 @@ main {
   display: flex;
   flex-direction: column;
 }
+
 .intro {
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 75vh;
   align-items: center;
-  position: relative;
+
   &__title {
     display: flex;
     align-items: flex-start;
@@ -16,66 +17,67 @@ main {
     color: $textcolor;
     height: 4vh;
   }
+
   &__avt {
     width: auto;
+
     #avt {
-      object-fit: cover;
       max-width: 100%;
       max-height: 100%;
     }
   }
+
   &__content {
     color: $textcolor;
     font-size: 1.5rem;
     margin: 1rem;
+
     .content__title {
       text-align: center;
       font-size: 2rem;
     }
+
     .content__info {
       display: flex;
       flex-direction: column;
     }
-    .btn__more {
-      cursor: pointer;
-    }
-    #more {
-      display: none;
-    }
   }
 }
-.skill {
+.service {
   width: 100vw;
   height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .skill__title {
+  bottom: 0;
+
+  .service__title {
     height: 5vh;
     font-size: 2rem;
     color: white;
   }
-  .skill__primary {
+  .service__primary {
+    margin: 0 1rem 0 1rem;
     width: 100vw;
     height: 15vh;
     display: flex;
     justify-content: space-around;
     align-items: baseline;
-    .skill__design {
-      @include skill;
+    .service__design {
+      @include serviceFormat;
     }
-    .skill__dev {
-      @include skill;
+    .service__dev {
+      @include serviceFormat;
     }
-    .skill__mobile {
-      @include skill;
+    .service__mobile {
+      @include serviceFormat;
     }
   }
 }
-.skill__name {
+.service__name {
   text-align: center;
 }
-.skill__explain {
+.service__explain {
   text-align: center;
 }

@@ -1,7 +1,7 @@
 @import "./abstract/variables";
 @import "./abstract/mixin";
 @import "./layout/portfolio_header";
-@import "./layout/portfolio_section_1";
+@import "./layout/portfolio_page1";
 *,
 *::after,
 *::before {
@@ -20,7 +20,7 @@ body {
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;
   font-size: 1rem;
-  height: 100vh;
+  height: 300vh;
 }
 main {
   display: flex;

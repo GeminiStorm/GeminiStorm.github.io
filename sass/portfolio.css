@@ -47,12 +47,11 @@ header {
 .dropdown .nav__icon {
   color: white;
   z-index: 10;
-  height: 2rem;
-  width: 2rem;
   position: fixed;
   -webkit-box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.2);
           box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.2);
-  right: 1rem;
+  top: 2rem;
+  right: 2rem;
 }
 
 .dropdown .nav__icon:hover {
@@ -185,7 +184,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 .intro__title {
@@ -205,8 +203,6 @@ main {
 }
 
 .intro__avt #avt {
-  -o-object-fit: cover;
-     object-fit: cover;
   max-width: 100%;
   max-height: 100%;
 }
@@ -232,15 +228,7 @@ main {
           flex-direction: column;
 }
 
-.intro__content .btn__more {
-  cursor: pointer;
-}
-
-.intro__content #more {
-  display: none;
-}
-
-.skill {
+.service {
   width: 100vw;
   height: 20vh;
   display: -webkit-box;
@@ -256,15 +244,17 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  bottom: 0;
 }
 
-.skill .skill__title {
+.service .service__title {
   height: 5vh;
   font-size: 2rem;
   color: white;
 }
 
-.skill .skill__primary {
+.service .service__primary {
+  margin: 0 1rem 0 1rem;
   width: 100vw;
   height: 15vh;
   display: -webkit-box;
@@ -277,7 +267,7 @@ main {
           align-items: baseline;
 }
 
-.skill .skill__primary .skill__design {
+.service .service__primary .service__design {
   height: 10vh;
   width: 100vw;
   bottom: 0;
@@ -298,7 +288,7 @@ main {
           justify-content: center;
 }
 
-.skill .skill__primary .skill__dev {
+.service .service__primary .service__dev {
   height: 10vh;
   width: 100vw;
   bottom: 0;
@@ -319,7 +309,7 @@ main {
           justify-content: center;
 }
 
-.skill .skill__primary .skill__mobile {
+.service .service__primary .service__mobile {
   height: 10vh;
   width: 100vw;
   bottom: 0;
@@ -340,11 +330,11 @@ main {
           justify-content: center;
 }
 
-.skill__name {
+.service__name {
   text-align: center;
 }
 
-.skill__explain {
+.service__explain {
   text-align: center;
 }
 
@@ -374,7 +364,7 @@ body {
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;
   font-size: 1rem;
-  height: 100vh;
+  height: 300vh;
 }
 
 main {
