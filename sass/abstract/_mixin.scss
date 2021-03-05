@@ -13,8 +13,9 @@
     color: skyblue;
   }
 }
-@mixin navPosition {
+@mixin navFormat {
   display: inline-block;
+  letter-spacing: 10px;
 }
 @mixin serviceFormat {
   height: 10vh;

@@ -64,8 +64,8 @@ header {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transition: 1s cubic-bezier(0.06, 0.36, 0, 1.01);
-  transition: 1s cubic-bezier(0.06, 0.36, 0, 1.01);
+  -webkit-transition: 0.5s cubic-bezier(0.06, 0.36, 0, 1.01);
+  transition: 0.5s cubic-bezier(0.06, 0.36, 0, 1.01);
 }
 
 .dropdown .navigation .nav__list {
@@ -97,6 +97,7 @@ header {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   display: inline-block;
+  letter-spacing: 10px;
 }
 
 .dropdown .navigation .nav__list .nav__home:hover {
@@ -111,6 +112,7 @@ header {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   display: inline-block;
+  letter-spacing: 10px;
 }
 
 .dropdown .navigation .nav__list .nav__about:hover {
@@ -125,6 +127,7 @@ header {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   display: inline-block;
+  letter-spacing: 10px;
 }
 
 .dropdown .navigation .nav__list .nav__skill:hover {
@@ -139,6 +142,7 @@ header {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   display: inline-block;
+  letter-spacing: 10px;
 }
 
 .dropdown .navigation .nav__list .nav__contact:hover {
