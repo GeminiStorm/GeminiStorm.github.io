@@ -31,38 +31,39 @@ header {
     right: 2rem;
     &:hover {
       cursor: pointer;
+      transform: scale(1.1);
     }
   }
   .navigation {
-    transition-duration: 0.5s;
     position: fixed;
     top: 50%;
     left: 50%;
+    transition: 1s cubic-bezier(0.06, 0.36, 0, 1.01);
     .nav__list {
       height: 100vh;
       width: 100vw;
       background-image: radial-gradient($skyblue, $skyblue-light);
       z-index: 5;
-      position: absolute;
-      top: 50%;
-      left: 50%;
       transform: translate(-50%, -50%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      transition: all 0.2s;
       .nav__home {
         @include navTransition;
+        @include navPosition;
       }
       .nav__about {
         @include navTransition;
+        @include navPosition;
       }
       .nav__skill {
         @include navTransition;
+        @include navPosition;
       }
       .nav__contact {
         @include navTransition;
+        @include navPosition;
       }
     }
   }
@@ -71,6 +72,7 @@ header {
     opacity: 0;
     height: 0px;
     background-position: top right;
+    top: -50%;
   }
   .nav {
     text-decoration: none;

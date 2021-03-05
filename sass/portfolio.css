@@ -56,14 +56,16 @@ header {
 
 .dropdown .nav__icon:hover {
   cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .dropdown .navigation {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
   position: fixed;
   top: 50%;
   left: 50%;
+  -webkit-transition: 1s cubic-bezier(0.06, 0.36, 0, 1.01);
+  transition: 1s cubic-bezier(0.06, 0.36, 0, 1.01);
 }
 
 .dropdown .navigation .nav__list {
@@ -71,9 +73,6 @@ header {
   width: 100vw;
   background-image: radial-gradient(#a0c4ff, #9bf6ff);
   z-index: 5;
-  position: absolute;
-  top: 50%;
-  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   display: -webkit-box;
@@ -89,16 +88,15 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
 }
 
 .dropdown .navigation .nav__list .nav__home {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
-  background-size: 230%;
+  background-size: 250%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  display: inline-block;
 }
 
 .dropdown .navigation .nav__list .nav__home:hover {
@@ -109,9 +107,10 @@ header {
 .dropdown .navigation .nav__list .nav__about {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
-  background-size: 230%;
+  background-size: 250%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  display: inline-block;
 }
 
 .dropdown .navigation .nav__list .nav__about:hover {
@@ -122,9 +121,10 @@ header {
 .dropdown .navigation .nav__list .nav__skill {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
-  background-size: 230%;
+  background-size: 250%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  display: inline-block;
 }
 
 .dropdown .navigation .nav__list .nav__skill:hover {
@@ -135,9 +135,10 @@ header {
 .dropdown .navigation .nav__list .nav__contact {
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, white 50%);
-  background-size: 230%;
+  background-size: 250%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  display: inline-block;
 }
 
 .dropdown .navigation .nav__list .nav__contact:hover {
@@ -149,6 +150,7 @@ header {
   opacity: 0;
   height: 0px;
   background-position: top right;
+  top: -50%;
 }
 
 .dropdown .nav {
