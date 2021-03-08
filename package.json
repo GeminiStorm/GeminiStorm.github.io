@@ -1,10 +1,11 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "2774aaaed3364cc491d738398f0a6e743fd5529d",
   "main": "landing.js",
   "scripts": {
-    "compile:sass": "node-sass sass/portfolio.scss sass/portfolio.css -w"
+    "scss": "gulp styles",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,11 @@
   },
   "homepage": "https://github.com/GeminiStorm/GeminiStorm.github.io#readme",
   "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
-  }
+  },
+  "dependencies": {},
+  "keywords": []
 }
