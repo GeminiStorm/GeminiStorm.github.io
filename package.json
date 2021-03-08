@@ -23,6 +23,8 @@
     "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
   "keywords": []
 }
