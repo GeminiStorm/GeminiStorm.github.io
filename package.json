@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "2774aaaed3364cc491d738398f0a6e743fd5529d",
   "main": "landing.js",
   "scripts": {
     "compile:sass": "node-sass sass/portfolio.scss sass/portfolio.css -w"
@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/GeminiStorm/GeminiStorm.github.io#readme",
   "devDependencies": {
+    "del": "^6.0.0",
+    "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
-  }
+  },
+  "dependencies": {},
+  "keywords": []
 }
