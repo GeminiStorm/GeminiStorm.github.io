@@ -24,7 +24,8 @@
     "node-sass": "^5.0.0"
   },
   "dependencies": {
-    "gulp-cli": "^2.3.0"
+    "gulp-cli": "^2.3.0",
+    "particles.js": "^2.0.0"
   },
   "keywords": []
 }
