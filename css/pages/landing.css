@@ -80,6 +80,22 @@ body {
   line-height: 1.5;
   font-size: 1rem; }
 
+@keyframes moveDown {
+  0% {
+    opacity: 0;
+    transform: translatey(-10rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 .btn--blue {
   margin-top: 2rem;
   list-style: none;
@@ -129,7 +145,6 @@ body {
   align-items: center;
   background-size: cover;
   background-repeat: no-repeat;
-  animation: shake 2s linear;
   animation-direction: alternate;
   color: white; }
 
