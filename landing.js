@@ -14,7 +14,7 @@ btnSelect.addEventListener("mouseleave", () => {
 const page = document.querySelector(".container");
 const spinner = document.querySelector(".second-wrapper");
 page.style.visibility = "hidden";
-setTimeout(() => {
+window.onload = function () {
   spinner.style.display = "none";
   page.style.visibility = "visible";
-}, 3000);
+};
