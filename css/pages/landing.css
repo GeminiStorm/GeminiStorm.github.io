@@ -96,6 +96,14 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes blink {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 0.5; }
+  100% {
+    opacity: 1; } }
+
 .btn--blue {
   margin-top: 2rem;
   list-style: none;
@@ -159,6 +167,16 @@ body {
   .title--small {
     font-size: 1.5rem;
     text-align: center; }
+
+.arrow {
+  margin-top: 1rem;
+  backface-visibility: hidden;
+  transition: all 0.3 ease-in;
+  animation: blink 1s linear infinite;
+  animation-delay: 2s;
+  text-transform: uppercase;
+  color: white;
+  animation-fill-mode: backwards; }
 
 * {
   margin: 0;
