@@ -1,7 +1,7 @@
-@import "./abstract/variables";
-@import "./abstract/mixin";
-@import "./layout/portfolio_header";
-@import "./layout/portfolio_page1";
+@import "sass/abstract/_variables";
+@import "sass/abstract/_mixin";
+@import "sass/layout/_portfolio_header";
+@import "sass/layout/_portfolio_page1";
 *,
 *::after,
 *::before {

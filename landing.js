@@ -10,3 +10,11 @@ btnSelect.addEventListener("mouseleave", () => {
 // btnSelect.addEventListener("click", () => {
 //   btnSelect.textContent = (changeColor = !changeColor) ? "isTrue" : "isFalse";
 // });
+
+const page = document.querySelector(".container");
+const spinner = document.querySelector(".second-wrapper");
+page.style.visibility = "hidden";
+setTimeout(() => {
+  spinner.style.display = "none";
+  page.style.visibility = "visible";
+}, 3000);
