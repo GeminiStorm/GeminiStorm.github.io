@@ -8,25 +8,3 @@
 html {
   font-size: 62.5%;
 }
-@mixin respond($breakpoint) {
-  @if $breakpoint == md {
-    @media screen and (min-width: $md) {
-      @content;
-    }
-  }
-  @if $breakpoint == lg {
-    @media screen and (min-width: $lg) {
-      @content;
-    }
-  }
-  @if $breakpoint == xl {
-    @media screen and (min-width: $xl) {
-      @content;
-    }
-  }
-  @if $breakpoint == xxl {
-    @media screen and (min-width: $xxl) {
-      @content;
-    }
-  }
-}

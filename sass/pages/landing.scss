@@ -1,4 +1,5 @@
 @import "sass/abstract/_variables.scss";
+@import "sass/abstract/_mixin.scss";
 @import "sass/components/_landing_loader";
 @import "sass/base/_base";
 @import "sass/base/_landing_typing";
@@ -12,18 +13,21 @@
   box-sizing: border-box;
 }
 @media screen and (min-width: $sm) {
+  html {
+    font-size: 65%;
+  }
 }
-@include respond(md) {
+@include respond($md) {
   html {
     font-size: 80%;
   }
 }
-@include respond(lg) {
+@include respond($lg) {
   html {
     font-size: 100%;
   }
 }
-@include respond(xl) {
+@include respond($xl) {
   html {
     font-size: 120%;
   }
@@ -33,7 +37,7 @@
   .title {
     font-weight: 300;
   }
-  @include respond(xxl) {
+  @include respond($xxl) {
     html {
       font-size: 140%;
     }
