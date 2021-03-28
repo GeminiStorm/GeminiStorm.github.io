@@ -81,47 +81,59 @@
 // }
 
 // console.log(scorers);
-const airLineSouth = {
-  name: "Tan Son Nhat",
-  code: "TSN",
-  booking: [],
-  book(passengerName, flightNumber) {
-    this.booking.push(
-      `Hành Khách ${passengerName} book chuyến bay ${this.code}${flightNumber}`
-    );
-  },
+//********Airplane Buy and Sell********* */
+// const airLineSouth = {
+//   name: "Tan Son Nhat",
+//   code: "TSN",
+//   booking: [],
+//   book(passengerName, flightNumber) {
+//     this.booking.push(
+//       `Hành Khách ${passengerName} book chuyến bay ${this.code}${flightNumber}`
+//     );
+//   },
+// };
+// const bookingList = airLineSouth.book;
+// const airLineNorth = {
+//   name: "Noi Bai",
+//   code: "NB",
+//   bookingNum: 124,
+//   booking: [],
+// };
+// airLineSouth.planes = 10;
+// airLineSouth.budget = 1000;
+// airLineSouth.buyPlane = function () {
+//   if (this.budget >= 100) {
+//     this.budget = this.budget - 100;
+//     this.planes++;
+//   } else {
+//     console.log("No Money No Plane");
+//   }
+//   console.log(this.planes, this.budget);
+// };
+// airLineSouth.sellPlane = function () {
+//   if (this.planes > 0) {
+//     this.planes--;
+//     this.budget = this.budget + 50;
+//   } else {
+//     console.log("No Plane No Sold");
+//   }
+//   console.log(this.planes, this.budget);
+// };
+// const buyGetClass = document.querySelector(".buy");
+// const sellGetClass = document.querySelector(".sell");
+// buyGetClass.addEventListener("click", airLineSouth.buyPlane.bind(airLineSouth));
+// sellGetClass.addEventListener(
+//   "click",
+//   airLineSouth.sellPlane.bind(airLineSouth)
+// );
+const addTax = function (rate) {
+  return function (value) {
+    const afterTax = value + rate * value;
+    console.log(afterTax);
+    return afterTax;
+  };
 };
-const bookingList = airLineSouth.book;
-const airLineNorth = {
-  name: "Noi Bai",
-  code: "NB",
-  bookingNum: 124,
-  booking: [],
-};
-airLineSouth.planes = 10;
-airLineSouth.budget = 1000;
-airLineSouth.buyPlane = function () {
-  if (this.budget >= 100) {
-    this.budget = this.budget - 100;
-    this.planes++;
-  } else {
-    console.log("No Money No Plane");
-  }
-  console.log(this.planes, this.budget);
-};
-airLineSouth.sellPlane = function () {
-  if (this.planes > 0) {
-    this.planes--;
-    this.budget = this.budget + 50;
-  } else {
-    console.log("No Plane No Sold");
-  }
-  console.log(this.planes, this.budget);
-};
-const buyGetClass = document.querySelector(".buy");
-const sellGetClass = document.querySelector(".sell");
-buyGetClass.addEventListener("click", airLineSouth.buyPlane.bind(airLineSouth));
-sellGetClass.addEventListener(
-  "click",
-  airLineSouth.sellPlane.bind(airLineSouth)
-);
+const taxInVN = addTax(0.1);
+const taxInUSA = addTax(0.3);
+taxInVN(200);
+taxInUSA(200);
