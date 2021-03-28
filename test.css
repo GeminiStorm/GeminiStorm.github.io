@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  background-color: royalblue;
+  display: flex;
+  font-size: 62, 5%;
+}
+.buy {
+  height: 5rem;
+  width: 10rem;
+  position: absolute;
+  top: 2rem;
+  left: 4rem;
+}
+.sell {
+  height: 5rem;
+  width: 10rem;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.poll {
+  height: 5rem;
+  width: 10rem;
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+}
