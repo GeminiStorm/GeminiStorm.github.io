@@ -13,7 +13,6 @@ gulp.task("styles", () => {
 gulp.task("clean", () => {
   return del(["css/portfolio.css"]);
 });
-
 gulp.task("default", gulp.series(["clean", "styles"]));
 gulp.task("watch", () => {
   gulp.watch("sass/**/*.scss", (done) => {

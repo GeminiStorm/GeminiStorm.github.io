@@ -1,0 +1,57 @@
+@mixin modal-child {
+  width: 80vw;
+  height: 50vh;
+  margin: 1rem;
+  border-radius: 2rem 2rem 0 0;
+  font-size: 2rem;
+  z-index: 1;
+}
+@mixin modal__text {
+  height: 50vh;
+  width: 20vw;
+  z-index: 2;
+  border-radius: 0 0 2rem 2rem;
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .modal1 {
+    @include modal-child();
+    &__btn {
+      font-size: 2rem;
+      background-color: red;
+      z-index: 10;
+      border-radius: 2rem 2rem 0 0;
+    }
+    &__text {
+      @include modal__text();
+    }
+  }
+  .modal2 {
+    @include modal-child();
+    &__text {
+      @include modal__text();
+    }
+  }
+  .modal3 {
+    @include modal-child();
+    &__text {
+      @include modal__text();
+    }
+  }
+}
+.hidden {
+  height: 0;
+  opacity: 0;
+}
