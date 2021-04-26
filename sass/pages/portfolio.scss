@@ -1,28 +1,13 @@
+@import "sass/base/_base";
 @import "sass/abstract/_variables";
 @import "sass/abstract/_mixin";
 @import "sass/layout/_portfolio_header";
-@import "sass/layout/_portfolio_page1";
-*,
-*::after,
-*::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-}
+@import "sass/layout/_portfolio_main";
+@import "sass/base/_portfolio_animation";
 body {
-  display: flex;
-  flex-direction: column;
-  background: url(../img/pic10doc.png) no-repeat;
-  background-size: cover;
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;
-  font-size: 1rem;
-  height: 300vh;
-}
-main {
-  display: flex;
-  flex-direction: column;
+  font-size: 2rem;
+  color: $textcolor;
+  background-color: $bgcolor;
 }

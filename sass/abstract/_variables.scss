@@ -3,10 +3,10 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 $xxl: 1400px;
-$skyblue-light: #9bf6ff;
-$skyblue: #a0c4ff;
+$lightbgcolor: rgba(0, 0, 0, 0.2);
+$bgcolor: rgb(23, 25, 51);
+$overlaycolor: #a0c4ff1e;
 $textcolor: white;
-$navcolor: linear-gradient(145deg, #397ae7, #90e5ed);
 $loadercolor: radial-gradient(
   circle 248px at center,
   #16d9e3 0%,

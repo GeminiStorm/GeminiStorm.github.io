@@ -1,10 +1,10 @@
 "use strict";
 const btnSelect = document.querySelector(".btn--blue");
 btnSelect.addEventListener("mouseover", () => {
-  btnSelect.textContent = "Discover me!";
+  btnSelect.textContent = "To my page!";
 });
 btnSelect.addEventListener("mouseleave", () => {
-  btnSelect.textContent = "What is this?";
+  btnSelect.textContent = "Welcome";
 });
 // let changeColor = true;
 // btnSelect.addEventListener("click", () => {

@@ -2,15 +2,57 @@
 @import "sass/abstract/_mixin.scss";
 @import "sass/components/_landing_loader";
 @import "sass/base/_base";
-@import "sass/base/_landing_typing";
 @import "sass/base/_landing_animation";
 @import "sass/components/_landing_btn";
-@import "sass/components/_landing_title";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+body {
+  font-family: "Raleway", Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+.title {
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 1rem;
+  animation-name: moveDown;
+  animation-duration: 1s;
+  text-transform: uppercase;
+  text-align: center;
+  &--small {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: $bgcolor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // animation: shake 2s linear;
+  animation-direction: alternate;
+  color: white;
+  .title-wrapper {
+    animation-name: appear;
+    transition-duration: 1s;
+    background-color: none;
+    padding: 3rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 @media screen and (min-width: $sm) {
   html {
@@ -20,6 +62,12 @@
 @include respond($md) {
   html {
     font-size: 80%;
+  }
+  .container {
+    .title-wrapper {
+      padding: 3rem;
+      background-color: $overlaycolor;
+    }
   }
 }
 @include respond($lg) {
@@ -31,18 +79,12 @@
   html {
     font-size: 120%;
   }
-  .container {
-    background-image: url(../../img/pic10.jpg);
-  }
   .title {
     font-weight: 300;
   }
   @include respond($xxl) {
     html {
       font-size: 140%;
-    }
-    .container {
-      background-image: url(../../img/pic10.jpg);
     }
     .title {
       font-weight: 400;

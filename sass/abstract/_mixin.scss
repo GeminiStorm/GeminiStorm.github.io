@@ -3,6 +3,16 @@
     @content;
   }
 }
+@mixin formSettings {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  text-align: start;
+  input {
+    height: 3rem;
+  }
+}
 // @mixin respond($breakpoint) {
 //   @if $breakpoint == md {
 //     @media screen and (min-width: $md) {
@@ -25,33 +35,3 @@
 //     }
 //   }
 // }
-@mixin navTransition {
-  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-  background-image: linear-gradient(
-    120deg,
-    transparent 0%,
-    transparent 50%,
-    white 50%
-  );
-  background-size: 250%;
-  transition: all 0.5s;
-  &:hover {
-    background-position: 100%;
-    color: skyblue;
-  }
-}
-@mixin navFormat {
-  display: inline-block;
-  letter-spacing: 10px;
-}
-@mixin serviceFormat {
-  height: 10vh;
-  width: 100vw;
-  bottom: 0;
-  font-size: 1.5rem;
-  display: flex;
-  color: white;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}

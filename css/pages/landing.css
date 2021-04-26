@@ -73,12 +73,8 @@
   box-sizing: border-box; }
 
 html {
+  scroll-behavior: smooth;
   font-size: 62.5%; }
-
-body {
-  font-family: "Raleway", Arial, sans-serif;
-  line-height: 1.5;
-  font-size: 1rem; }
 
 @keyframes moveDown {
   0% {
@@ -96,6 +92,12 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 @keyframes blink {
   0% {
     opacity: 0; }
@@ -111,7 +113,7 @@ body {
   color: white;
   font-weight: 400;
   text-transform: uppercase;
-  padding: 1rem 2rem;
+  padding: 1rem 3rem;
   cursor: pointer;
   border-radius: 2rem;
   font-size: 1.5rem;
@@ -127,20 +129,8 @@ body {
     color: white;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5); }
     .btn--blue:hover::after {
-      transform: scale(1.5);
       opacity: 0;
       transition: 0.4s; }
-  .btn--blue::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    background-image: linear-gradient(145deg, #397ae7, #90e5ed); }
 
 .arrow {
   margin-top: 1rem;
@@ -152,11 +142,33 @@ body {
   color: white;
   animation-fill-mode: backwards; }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Raleway", Arial, sans-serif;
+  line-height: 1.5;
+  font-size: 1rem; }
+
+.title {
+  font-size: 3rem;
+  font-weight: 200;
+  letter-spacing: 1rem;
+  animation-name: moveDown;
+  animation-duration: 1s;
+  text-transform: uppercase;
+  text-align: center; }
+  .title--small {
+    font-size: 1.5rem;
+    text-align: center; }
+
 .container {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-image: url(../../img/pic10doc.png);
+  background-color: #171933;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,22 +177,15 @@ body {
   background-repeat: no-repeat;
   animation-direction: alternate;
   color: white; }
-  .container .title {
-    font-size: 3rem;
-    font-weight: 200;
-    letter-spacing: 1rem;
-    animation-name: moveDown;
-    animation-duration: 1s;
-    text-transform: uppercase;
-    text-align: center; }
-    .container .title--small {
-      font-size: 1.5rem;
-      text-align: center; }
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  .container .title-wrapper {
+    animation-name: appear;
+    transition-duration: 1s;
+    background-color: none;
+    padding: 3rem 1rem 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
 
 @media screen and (min-width: 576px) {
   html {
@@ -188,7 +193,10 @@ body {
 
 @media screen and (min-width: 768px) {
   html {
-    font-size: 80%; } }
+    font-size: 80%; }
+  .container .title-wrapper {
+    padding: 3rem;
+    background-color: #a0c4ff1e; } }
 
 @media screen and (min-width: 992px) {
   html {
@@ -197,15 +205,11 @@ body {
 @media screen and (min-width: 1200px) {
   html {
     font-size: 120%; }
-  .container {
-    background-image: url(../../img/pic10.jpg); }
   .title {
     font-weight: 300; } }
 
 @media screen and (min-width: 1200px) and (min-width: 1400px) {
   html {
     font-size: 140%; }
-  .container {
-    background-image: url(../../img/pic10.jpg); }
   .title {
     font-weight: 400; } }
