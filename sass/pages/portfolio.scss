@@ -4,6 +4,22 @@
 @import "sass/layout/_portfolio_header";
 @import "sass/layout/_portfolio_main";
 @import "sass/base/_portfolio_animation";
+@include desktopFirst($lg) {
+  html {
+    font-size: 60%;
+  }
+}
+@include desktopFirst($md) {
+  html {
+    font-size: 50%;
+  }
+}
+@include desktopFirst($sm) {
+  html {
+    font-size: 40%;
+  }
+}
+
 body {
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;

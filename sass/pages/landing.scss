@@ -59,7 +59,7 @@ body {
     font-size: 65%;
   }
 }
-@include respond($md) {
+@include mobileFirst($md) {
   html {
     font-size: 80%;
   }
@@ -70,19 +70,19 @@ body {
     }
   }
 }
-@include respond($lg) {
+@include mobileFirst($lg) {
   html {
     font-size: 100%;
   }
 }
-@include respond($xl) {
+@include mobileFirst($xl) {
   html {
     font-size: 120%;
   }
   .title {
     font-weight: 300;
   }
-  @include respond($xxl) {
+  @include mobileFirst($xxl) {
     html {
       font-size: 140%;
     }

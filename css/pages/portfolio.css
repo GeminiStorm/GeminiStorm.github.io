@@ -301,6 +301,18 @@ header {
   100% {
     width: 100%; } }
 
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 60%; } }
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 50%; } }
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 40%; } }
+
 body {
   font-family: "Raleway", Arial, sans-serif;
   line-height: 1.5;

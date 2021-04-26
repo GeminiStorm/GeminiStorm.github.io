@@ -1,5 +1,10 @@
-@mixin respond($breakpoint) {
+@mixin mobileFirst($breakpoint) {
   @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+@mixin desktopFirst($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
     @content;
   }
 }
