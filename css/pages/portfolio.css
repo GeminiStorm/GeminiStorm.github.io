@@ -36,16 +36,28 @@ header {
     justify-content: space-evenly;
     align-items: center;
     list-style: none; }
+    header .nav__links .fas {
+      display: none;
+      width: 0;
+      height: 0; }
     header .nav__links .nav__link {
       text-decoration: none;
       color: white; }
 
 @media screen and (max-width: 576px) {
   .nav__links {
-    display: flex;
-    flex-direction: column; }
-    .nav__links::before {
-      content: "abc"; } }
+    flex-direction: column;
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .nav__links .nav__link {
+      display: none;
+      width: 0; }
+    .nav__links #menu {
+      display: block;
+      position: absolute;
+      transition-duration: 0.5s; } }
 
 .about {
   max-width: 90vw;
@@ -109,6 +121,17 @@ header {
         align-items: center;
         max-width: 100%;
         max-height: auto; }
+
+@media screen and (max-width: 576px) {
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; }
+    .about .intro__title {
+      margin-bottom: 10vh;
+      width: 80vw; }
+    .about .intro__avt {
+      width: 80vw; } }
 
 .skill {
   height: 100vh;
@@ -178,6 +201,23 @@ header {
 
 .description--active {
   display: block !important; }
+
+@media screen and (max-width: 576px) {
+  .skill .skill__btn {
+    column-gap: 1rem; }
+    .skill .skill__btn .btn {
+      width: 15rem; }
+      .skill .skill__btn .btn span {
+        display: none; }
+  .skill .tools {
+    height: 40vh; }
+    .skill .tools .tools__title {
+      padding-top: 5rem; }
+    .skill .tools .tool__list {
+      display: flex;
+      flex-wrap: wrap; }
+      .skill .tools .tool__list .tool {
+        padding: 4rem; } }
 
 .projects {
   width: 90vw;
@@ -250,6 +290,25 @@ header {
       .projects .projects__list .project .project__text {
         text-align: center; }
 
+@media screen and (max-width: 576px) {
+  .projects {
+    margin-top: 10rem;
+    width: auto;
+    height: auto; }
+    .projects .projects__list {
+      display: flex;
+      flex-direction: column; }
+      .projects .projects__list .project {
+        height: 45vh; }
+        .projects .projects__list .project .project1__title {
+          padding: 2rem; }
+        .projects .projects__list .project .project2__title {
+          margin-top: 5rem;
+          padding: 2rem; }
+        .projects .projects__list .project h5 {
+          margin-top: 1rem;
+          padding: 0; } }
+
 .contact__form {
   height: 80vh;
   display: flex;
@@ -307,6 +366,9 @@ header {
   justify-content: space-evenly;
   align-items: center; }
 
+.contact__link {
+  cursor: pointer; }
+
 .link {
   color: #171933;
   text-decoration: none; }
@@ -323,6 +385,16 @@ header {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
   z-index: 5; }
+
+@media screen and (max-width: 576px) {
+  .contact__form {
+    margin-top: 10vh;
+    height: 90vh;
+    width: 80vw; }
+    .contact__form .input {
+      width: 100%; }
+  .link {
+    display: none; } }
 
 @keyframes grow {
   0% {

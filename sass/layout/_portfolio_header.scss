@@ -27,6 +27,11 @@ header {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+    .fas {
+      display: none;
+      width: 0;
+      height: 0;
+    }
     .nav__link {
       text-decoration: none;
       color: white;
@@ -35,10 +40,19 @@ header {
 }
 @include desktopFirst($sm) {
   .nav__links {
-    display: flex;
     flex-direction: column;
-    &::before {
-      content: "abc";
+    background-color: red;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .nav__link {
+      display: none;
+      width: 0;
+    }
+    #menu {
+      display: block;
+      position: absolute;
+      transition-duration: 0.5s;
     }
   }
 } ;
