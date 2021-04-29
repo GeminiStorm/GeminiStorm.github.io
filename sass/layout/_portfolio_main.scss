@@ -318,7 +318,6 @@
 //responsive
 @include desktopFirst($sm) {
   .projects {
-    margin-top: 10rem;
     width: auto;
     height: auto;
     .projects__list {

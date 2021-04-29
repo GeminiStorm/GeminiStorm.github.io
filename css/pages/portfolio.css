@@ -324,7 +324,6 @@ header {
 
 @media screen and (max-width: 576px) {
   .projects {
-    margin-top: 10rem;
     width: auto;
     height: auto; }
     .projects .projects__list {
