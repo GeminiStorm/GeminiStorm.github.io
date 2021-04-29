@@ -20,6 +20,9 @@ header {
       font-weight: 700;
     }
   }
+  .fas {
+    display: none;
+  }
   .nav__links {
     grid-row: 1/2;
     grid-column: 2/3;
@@ -27,11 +30,6 @@ header {
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    .fas {
-      display: none;
-      width: 0;
-      height: 0;
-    }
     .nav__link {
       text-decoration: none;
       color: white;
@@ -39,20 +37,31 @@ header {
   }
 }
 @include desktopFirst($sm) {
-  .nav__links {
-    flex-direction: column;
-    background-color: red;
-    justify-content: center;
+  header {
+    z-index: 100;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 85vw 1fr;
+    justify-content: flex-start;
     align-items: center;
-    position: relative;
-    .nav__link {
-      display: none;
-      width: 0;
-    }
     #menu {
       display: block;
-      position: absolute;
+      position: relative;
       transition-duration: 0.5s;
+      cursor: pointer;
+    }
+    .nav__links {
+      display: none;
+      flex-direction: column;
+      top: 4rem;
+      right: 0;
+      height: 30vh;
+      width: 30vw;
+      position: absolute;
+      background-color: rgb(0, 3, 42);
     }
   }
-} ;
+}
+.active {
+  display: flex !important;
+}

@@ -128,3 +128,12 @@ document.addEventListener("keydown", function (e) {
     closeModal2();
   }
 });
+//dropdown menu
+const getBars = document.getElementById("menu");
+const getNav = document.querySelector(".nav__links");
+getBars.addEventListener("click", function () {
+  getNav.classList.toggle("active");
+});
+getNavLinks.forEach(function (link) {
+  link.addEventListener("click", () => getNav.classList.remove("active"));
+});

@@ -76,15 +76,33 @@
 //responsive
 @include desktopFirst($sm) {
   .about {
+    padding: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     .intro__title {
+      margin-top: 10vh;
       margin-bottom: 10vh;
       width: 80vw;
+      padding: 0;
+      .title__contain {
+        line-height: 2;
+        font-size: 2.5rem;
+      }
     }
     .intro__avt {
-      width: 80vw;
+      width: 90vw;
+      height: auto;
+      picture {
+        &::before {
+          top: 0;
+          left: 0;
+        }
+        &::after {
+          top: 0;
+          right: 0;
+        }
+      }
     }
   }
 }
@@ -363,19 +381,7 @@
   color: $bgcolor;
   text-decoration: none;
 }
-.hidden {
-  display: none;
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 400%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  z-index: 5;
-}
+
 //responsive
 @include desktopFirst($sm) {
   .contact__form {
@@ -389,4 +395,18 @@
   .link {
     display: none;
   }
+}
+//ultility class
+.hidden {
+  display: none;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
 }
