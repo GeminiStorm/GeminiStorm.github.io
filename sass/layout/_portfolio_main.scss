@@ -325,6 +325,20 @@
       flex-direction: column;
       .project {
         height: 45vh;
+        .project1__modal {
+          height: auto;
+          width: 80vw;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+        .project2__modal {
+          height: auto;
+          width: 80vw;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
         .project1__title {
           padding: 2rem;
         }
