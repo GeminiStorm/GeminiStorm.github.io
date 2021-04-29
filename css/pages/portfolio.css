@@ -10,6 +10,7 @@ html {
   font-size: 62.5%; }
 
 header {
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   position: sticky;
@@ -44,7 +45,6 @@ header {
 
 @media screen and (max-width: 576px) {
   header {
-    z-index: 100;
     margin: 0;
     padding: 0;
     grid-template-columns: 85vw 1fr;
@@ -239,6 +239,16 @@ header {
       display: flex;
       flex-wrap: wrap; }
       .skill .tools .tool__list .tool {
+        width: 40%; } }
+
+@media screen and (max-width: 1024px) {
+  .tools {
+    height: 50vh; }
+    .tools .tool__list {
+      margin-bottom: 10rem; }
+      .tools .tool__list .tool {
+        height: 50%;
+        width: 50%;
         padding: 4rem; } }
 
 .projects {
@@ -331,6 +341,12 @@ header {
           margin-top: 1rem;
           padding: 0; } }
 
+@media screen and (max-width: 1024px) {
+  .projects {
+    margin-top: 10rem; }
+    .projects .projects__list {
+      padding: 5rem; } }
+
 .contact__form {
   height: 80vh;
   display: flex;
@@ -401,9 +417,18 @@ header {
     height: 90vh;
     width: 80vw; }
     .contact__form .input {
-      width: 100%; }
+      width: 90%; }
+  .contact__links {
+    margin-top: 0; }
   .link {
     display: none; } }
+
+@media screen and (max-width: 1024px) {
+  .contact__form {
+    margin-top: 10vh; }
+    .contact__form .contact__title {
+      font-size: 3rem;
+      margin-bottom: 0; } }
 
 .hidden {
   display: none; }
@@ -424,7 +449,7 @@ header {
   100% {
     width: 100%; } }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1024px) {
   html {
     font-size: 60%; } }
 

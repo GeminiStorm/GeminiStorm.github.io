@@ -1,4 +1,5 @@
 header {
+  z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   position: sticky;
@@ -38,7 +39,6 @@ header {
 }
 @include desktopFirst($sm) {
   header {
-    z-index: 100;
     margin: 0;
     padding: 0;
     grid-template-columns: 85vw 1fr;
