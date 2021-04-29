@@ -8,11 +8,11 @@
     @content;
   }
 }
-@mixin formSettings {
+@mixin formSettingsXL {
   font-size: 2rem;
   display: flex;
   flex-direction: column;
-  width: 40rem;
+  width: 25vw;
   text-align: start;
   input {
     height: 3rem;

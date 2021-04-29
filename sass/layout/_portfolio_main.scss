@@ -10,10 +10,13 @@
   align-items: center;
   .intro__title {
     height: auto;
-    width: 60rem;
-    margin: auto;
+    width: 45vw;
+    padding: 10vw;
     grid-row: auto;
     grid-column: 1/2;
+    .title__header {
+      padding-bottom: 3rem;
+    }
     .title__contain {
       .highlight {
         position: relative;
@@ -34,13 +37,34 @@
     }
   }
   .intro__avt {
-    width: 60rem;
-    height: auto;
+    width: 45vw;
     grid-row: auto;
     grid-column: 2/3;
     picture {
+      margin: auto;
+      width: 80%;
       display: flex;
-      img {
+      position: relative;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(108, 110, 218, 0.1);
+        top: 24%;
+        left: 18%;
+      }
+      &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(7, 7, 15, 0.4);
+        bottom: 24%;
+        right: 20%;
+      }
+      .avt__img {
+        z-index: 10;
         justify-content: center;
         align-items: center;
         max-width: 100%;
@@ -235,13 +259,13 @@
     margin-bottom: 10rem;
   }
   .input__username {
-    @include formSettings;
+    @include formSettingsXL;
   }
   .input__email {
-    @include formSettings;
+    @include formSettingsXL;
   }
   .input__message {
-    @include formSettings;
+    @include formSettingsXL;
   }
   .btn__form {
     margin-top: 5rem;
@@ -257,6 +281,7 @@
   }
 }
 .contact__links {
+  margin-top: 6rem;
   color: $bgcolor;
   height: 7vh;
   background-color: white;

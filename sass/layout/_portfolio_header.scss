@@ -33,3 +33,12 @@ header {
     }
   }
 }
+@include desktopFirst($sm) {
+  .nav__links {
+    display: flex;
+    flex-direction: column;
+    &::before {
+      content: "abc";
+    }
+  }
+} ;

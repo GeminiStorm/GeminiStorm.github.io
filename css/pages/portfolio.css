@@ -40,6 +40,13 @@ header {
       text-decoration: none;
       color: white; }
 
+@media screen and (max-width: 576px) {
+  .nav__links {
+    display: flex;
+    flex-direction: column; }
+    .nav__links::before {
+      content: "abc"; } }
+
 .about {
   max-width: 90vw;
   height: 100vh;
@@ -51,10 +58,12 @@ header {
   align-items: center; }
   .about .intro__title {
     height: auto;
-    width: 60rem;
-    margin: auto;
+    width: 45vw;
+    padding: 10vw;
     grid-row: auto;
     grid-column: 1/2; }
+    .about .intro__title .title__header {
+      padding-bottom: 3rem; }
     .about .intro__title .title__contain .highlight {
       position: relative; }
     .about .intro__title .title__contain .highlight::after {
@@ -70,13 +79,32 @@ header {
       transform: scale(1.07, 1.05) skewX(-20deg);
       background-image: linear-gradient(to top, #181e77, #ffffff); }
   .about .intro__avt {
-    width: 60rem;
-    height: auto;
+    width: 45vw;
     grid-row: auto;
     grid-column: 2/3; }
     .about .intro__avt picture {
-      display: flex; }
-      .about .intro__avt picture img {
+      margin: auto;
+      width: 80%;
+      display: flex;
+      position: relative; }
+      .about .intro__avt picture::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(108, 110, 218, 0.1);
+        top: 24%;
+        left: 18%; }
+      .about .intro__avt picture::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: rgba(7, 7, 15, 0.4);
+        bottom: 24%;
+        right: 20%; }
+      .about .intro__avt picture .avt__img {
+        z-index: 10;
         justify-content: center;
         align-items: center;
         max-width: 100%;
@@ -239,7 +267,7 @@ header {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    width: 25vw;
     text-align: start; }
     .contact__form .input__username input {
       height: 3rem; }
@@ -247,7 +275,7 @@ header {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    width: 25vw;
     text-align: start; }
     .contact__form .input__email input {
       height: 3rem; }
@@ -255,7 +283,7 @@ header {
     font-size: 2rem;
     display: flex;
     flex-direction: column;
-    width: 40rem;
+    width: 25vw;
     text-align: start; }
     .contact__form .input__message input {
       height: 3rem; }
@@ -271,6 +299,7 @@ header {
       box-shadow: rgba(0, 0, 0, 0.2); }
 
 .contact__links {
+  margin-top: 6rem;
   color: #171933;
   height: 7vh;
   background-color: white;
