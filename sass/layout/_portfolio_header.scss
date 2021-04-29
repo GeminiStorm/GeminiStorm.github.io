@@ -25,12 +25,11 @@ header {
     display: none;
   }
   .nav__links {
-    grid-row: 1/2;
-    grid-column: 2/3;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
+    transition-duration: 0.5s;
     .nav__link {
       text-decoration: none;
       color: white;
@@ -39,29 +38,34 @@ header {
 }
 @include desktopFirst($sm) {
   header {
-    margin: 0;
-    padding: 0;
-    grid-template-columns: 85vw 1fr;
-    justify-content: flex-start;
-    align-items: center;
     #menu {
+      margin-right: 2rem;
+      justify-self: flex-end;
       display: block;
       position: relative;
-      transition-duration: 0.5s;
+      transition: 0.2s ease-in;
       cursor: pointer;
+      z-index: 201;
     }
     .nav__links {
-      display: none;
+      width: 40vw;
+      height: 0;
       flex-direction: column;
-      top: 4rem;
+      top: 5vh;
       right: 0;
-      height: 30vh;
-      width: 30vw;
+      transform-origin: top;
       position: absolute;
-      background-color: rgb(0, 3, 42);
+      background-color: rgba(0, 0, 0, 0.9);
+      overflow-y: hidden;
+      .nav__link {
+        padding: 2rem;
+      }
     }
   }
 }
-.active {
-  display: flex !important;
+header {
+  .active {
+    justify-content: space-evenly;
+    height: 40vh;
+  }
 }
