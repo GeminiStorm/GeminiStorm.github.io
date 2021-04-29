@@ -167,6 +167,12 @@
     <footer>
         <div id="ct" class="container_form">
             <form class="contact__form" action="">
+                <div class="contact__error hidden">
+                    <i class="error__close fas fa-times"></i>
+                    <p class="error__text">This function is under development, please email or message me instead,
+                        sorry for
+                        the inconvenience!</p>
+                </div>
                 <h1 class="contact__title">Feel free to contact me</h1>
                 <div class="input input__username">
                     <label for="usr">FullName</label>
@@ -180,7 +186,8 @@
                     <label for="mess">Message</label>
                     <textarea placeholder="Your message" name="message" id="mess" cols="30" rows="5"></textarea>
                 </div>
-                <button name="submit-btn" class=" btn__form" type="submit">Submit</button>
+                <button name="submit-btn" class=" btn__form" type="submit">Submit
+                </button>
             </form>
             <div class="contact__links">
                 <div class="contact__link facebook__link">

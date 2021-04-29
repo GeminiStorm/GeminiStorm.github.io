@@ -137,3 +137,23 @@ getBars.addEventListener("click", function () {
 getNavLinks.forEach(function (link) {
   link.addEventListener("click", () => getNav.classList.remove("active"));
 });
+//error submit popup
+const getError = document.querySelector(".contact__error");
+const getSubmitBtn = document.querySelector(".btn__form");
+const btnCloseError = document.querySelector(".error__close");
+const closeError = function () {
+  getError.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
+getSubmitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+  getError.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+});
+btnCloseError.addEventListener("click", closeError);
+overlay.addEventListener("click", closeError);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && !getError.classList.contains("hidden")) {
+    closeError();
+  }
+});
