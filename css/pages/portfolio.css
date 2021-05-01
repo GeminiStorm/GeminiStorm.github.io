@@ -210,7 +210,7 @@ header .active {
       .about .intro__title .title__contain {
         line-height: 2; }
     .about .intro__avt {
-      width: 80vw;
+      width: 100vw;
       height: auto; }
       .about .intro__avt picture::before {
         top: 0;
