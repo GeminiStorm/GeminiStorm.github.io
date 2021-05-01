@@ -72,11 +72,21 @@ header {
     display: flex;
     .logo {
       .logo__container {
-        flex: 1;
+        text-align: start;
+        flex: 2;
         width: 50vw;
+        .player--previous {
+          margin: 0;
+        }
+        .player--next {
+          margin: 0;
+        }
       }
       .music__player {
         flex: 1;
+        .music__info {
+          font-size: 1.5rem;
+        }
       }
     }
     #menu {
@@ -112,4 +122,24 @@ header {
 }
 .logo--hidden {
   visibility: hidden !important;
+}
+@include desktopFirst($lg) {
+  header {
+    .logo {
+      display: flex;
+      .logo__container {
+        flex: 2;
+        width: 30vw;
+        .player--previous {
+          margin: 0;
+        }
+        .player--next {
+          margin: 0;
+        }
+      }
+      .music__player {
+        flex: 1;
+      }
+    }
+  }
 }

@@ -190,12 +190,7 @@ document.addEventListener("keydown", function (e) {
   }
 });
 //music player
-const songs = [
-  "DrunkGroove",
-  "ThoiKhongSaiLech",
-  "YoruNiKakeru",
-  "MotGiacMongXua",
-];
+const songs = ["DrunkGroove", "ThoiKhongSaiLech", "YoruNiKakeru"];
 let songIndex = 0;
 const songInfo = document.querySelector(".music__info");
 const play = document.querySelector(".logo__player");
