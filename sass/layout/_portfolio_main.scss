@@ -89,10 +89,8 @@
   .about {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-evenly;
     .intro__title {
-      margin-top: 10vh;
-      margin-bottom: 10vh;
       width: 80vw;
       padding: 0;
       .title__header {
