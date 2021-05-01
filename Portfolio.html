@@ -10,8 +10,8 @@
     <link rel="icon" href="./img/career__portfolio__suitcase_generated.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
     <title>Portfolio</title>
+    <script defer src="./portfolio.js"></script>
 
 <body>
     <header>
@@ -32,15 +32,26 @@
         <section id="abt" class="about">
             <div class="intro__title">
                 <h2 class="title__header">About me</h2>
-                <i class="title__contain"> I'm a <span class="highlight">Web Developer</span> from HCM-Việt Nam, I have
+                <i class="title__contain"> I'm a <span class="highlight">Web Developer</span>
+                    from HCM-Việt Nam, I have
                     a passion for web development and
-                    love to create web and web apps.</i>
+                    love to create web and web apps. </i>
+                <div>
+                    <i style="display:none" class="title__contain--more">
+                        I'm looking forward to:
+                        <br>✔ A stable job in a long term.
+                        <br>✔ A job with good promotion opportunities.
+                        <br>✔ A job with good salary.
+                        <br>✔ A place with a good chance to dedicate myself.
+                    </i>
+                    <button class="title__contain--btn">Read more</button><span class="title__contain--dots">...</span>
+                </div>
+
             </div>
             <div class="intro__avt">
                 <picture class="avt__pic">
-                    <source media="(max-width:605px)" srcset="/img/avt-605x454.jpg">
-                    <source media="(max-width:2016px)" srcset="/img/avt-2000x1500.jpg">
-                    <img class="avt__img" src="/img/avt-4000x3000.jpg" alt="Dang Khoa">
+                    <source media="(max-width:605px)" srcset="/img/bi-461x615.jpg">
+                    <img class="avt__img" src="/img/bi-1536x2048.jpg" alt="Dang Khoa">
                 </picture>
             </div>
         </section>
@@ -143,27 +154,6 @@
                 </div>
             </div>
         </section>
-        <!-- <div class="skill">
-                    <div class="photoshop">pts</div>
-                    <div class="html/css">html/css</div>
-                    <div class="javascript">js</div>
-                </div>
-                <div class="education">
-                    <div class="toeic">toeic900</div>
-                    <div class="graduation">fptjetking</div>
-                </div>
-                <div class="interest">
-                    <div class="badminton">badminton</div>
-                    <div class="anime">anime</div>
-                    <div class="newtech">newtech</div>
-                </div>
-                <div class="favorite-quote">
-                    <div class="quote1">quote</div>
-                    <div class="quote2">quote</div>
-                    <div class="quote3">quote</div>
-                    <div class="quote4">quote</div>
-                    <div class="quote5">quote</div>
-                </div> -->
     </main>
     <footer>
         <div id="ct" class="container_form">
@@ -211,6 +201,6 @@
     </footer>
 </body>
 
-<script src="./portfolio.js"></script>
+
 
 </html>

@@ -35,6 +35,25 @@ getNavLinks.forEach((nav) =>
     }
   })
 );
+//hide logo when scrolling
+const sectionAbout = document.getElementById("abt");
+const sectionSkill = document.getElementById("sk");
+const logo = document.querySelector(".logo");
+const hideLogo = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+  if (!entry.isIntersecting) {
+    logo.classList.add("logo--hidden");
+  } else {
+    logo.classList.remove("logo--hidden");
+  }
+};
+const obsOptions = {
+  root: null,
+  threshold: 0.7,
+};
+const headerObserver = new IntersectionObserver(hideLogo, obsOptions);
+headerObserver.observe(sectionAbout);
 //Skill display
 const getBtn = document.querySelectorAll(".btn");
 let resetBtn;
@@ -137,6 +156,20 @@ getBars.addEventListener("click", function () {
 getNavLinks.forEach(function (link) {
   link.addEventListener("click", () => getNav.classList.remove("active"));
 });
+//title Read more
+const dots = document.querySelector(".title__contain--dots");
+const moreText = document.querySelector(".title__contain--more");
+const btnText = document.querySelector(".title__contain--btn");
+const readmore = function () {
+  if (moreText.style.display === "none") {
+    moreText.style.display = "block";
+    btnText.textContent = "Read less";
+  } else if (moreText.style.display === "block") {
+    moreText.style.display = "none";
+    btnText.textContent = "Read more";
+  }
+};
+btnText.addEventListener("click", readmore);
 //error submit popup
 const getError = document.querySelector(".contact__error");
 const getSubmitBtn = document.querySelector(".btn__form");

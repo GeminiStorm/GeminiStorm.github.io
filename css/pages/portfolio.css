@@ -13,15 +13,16 @@ header {
   z-index: 100;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  position: sticky;
   top: 0;
+  position: sticky;
   height: 5vh;
   margin: auto;
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  transition-duration: 0.5s ease-in; }
   header .logo {
     margin: auto;
     grid-row: 1/2;
@@ -68,6 +69,9 @@ header .active {
   justify-content: space-evenly;
   height: 40vh; }
 
+.logo--hidden {
+  visibility: hidden !important; }
+
 .about {
   max-width: 90vw;
   height: 100vh;
@@ -80,7 +84,6 @@ header .active {
   .about .intro__title {
     height: auto;
     width: 45vw;
-    padding: 10vw;
     grid-row: auto;
     grid-column: 1/2; }
     .about .intro__title .title__header {
@@ -100,12 +103,13 @@ header .active {
       transform: scale(1.07, 1.05) skewX(-20deg);
       background-image: linear-gradient(to top, #181e77, #ffffff); }
   .about .intro__avt {
+    padding: 2rem;
     width: 45vw;
     grid-row: auto;
     grid-column: 2/3; }
     .about .intro__avt picture {
       margin: auto;
-      width: 80%;
+      width: 50%;
       display: flex;
       position: relative; }
       .about .intro__avt picture::before {
@@ -131,9 +135,19 @@ header .active {
         max-width: 100%;
         max-height: auto; }
 
+.title__contain--btn {
+  padding: 0.5rem;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  border-radius: 1rem; }
+
+.title__contain--dots {
+  letter-spacing: 0.5rem; }
+
 @media screen and (max-width: 576px) {
   .about {
-    padding: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start; }
@@ -142,11 +156,12 @@ header .active {
       margin-bottom: 10vh;
       width: 80vw;
       padding: 0; }
+      .about .intro__title .title__header {
+        text-align: center; }
       .about .intro__title .title__contain {
-        line-height: 2;
-        font-size: 2.5rem; }
+        line-height: 2; }
     .about .intro__avt {
-      width: 90vw;
+      width: 80vw;
       height: auto; }
       .about .intro__avt picture::before {
         top: 0;
@@ -156,6 +171,9 @@ header .active {
         right: 0; } }
 
 .skill {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
   width: 90vw;
   margin: auto; }
@@ -169,7 +187,7 @@ header .active {
       z-index: 10;
       font-size: 2rem;
       border: none;
-      border-radius: 5rem;
+      border-radius: 1rem;
       width: 30rem;
       height: 5rem;
       background-color: white;
@@ -225,25 +243,36 @@ header .active {
   display: block !important; }
 
 @media screen and (max-width: 576px) {
-  .skill .skill__btn {
-    column-gap: 1rem; }
-    .skill .skill__btn .btn {
-      width: 15rem; }
-      .skill .skill__btn .btn span {
-        display: none; }
-  .skill .tools {
-    height: 40vh; }
-    .skill .tools .tools__title {
-      padding-top: 5rem; }
-    .skill .tools .tool__list {
-      display: flex;
-      flex-wrap: wrap; }
-      .skill .tools .tool__list .tool {
-        width: 40%; } }
+  .skill {
+    align-items: center; }
+    .skill .skill__title {
+      text-align: center; }
+    .skill .skill__btn {
+      width: 90%;
+      column-gap: 0;
+      justify-content: space-between; }
+      .skill .skill__btn .btn {
+        width: 22vw; }
+        .skill .skill__btn .btn span {
+          display: none; }
+    .skill .tools {
+      justify-content: center; }
+      .skill .tools .tools__title {
+        margin-top: 10rem; }
+      .skill .tools .tool__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 50vh; }
+        .skill .tools .tool__list .tool {
+          width: 40%; } }
 
 @media screen and (max-width: 1024px) {
   .tools {
     height: 50vh; }
+    .tools .tools__title {
+      text-align: center; }
     .tools .tool__list {
       margin-bottom: 10rem; }
       .tools .tool__list .tool {
@@ -326,6 +355,8 @@ header .active {
   .projects {
     width: auto;
     height: auto; }
+    .projects .projects__title {
+      text-align: center; }
     .projects .projects__list {
       display: flex;
       flex-direction: column; }
