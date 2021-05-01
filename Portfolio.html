@@ -11,15 +11,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Portfolio</title>
-    <script defer src="./portfolio.js"></script>
+
 
 <body>
     <header>
         <div class="logo">
-            <a href="#abt" class="logo__text">Made by <span><i class="fab fa-korvue"
-                        style="color: white;"></i></span>hoa</a>
+            <div class="logo__container">
+                <button class="player--previous hidden fas fa-step-backward"></button>
+                <a href="#abt" class="logo__text">Made by Kho<i
+                        class=" logo__player player--deactive fas fa-play fa-xs"></i></a>
+                <button class="player--next hidden fas fa-step-forward"></button>
+            </div>
+            <div class="music__player">
+                <div class="music__info">Press logo to play music</div>
+                <audio id="music" src="./music/MotGiacMongXua.mp3"></audio>
+            </div>
         </div>
-        <i id="menu" class="fas fa-bars"></i>
+        <i id="menu" class="nav__icon fas fa-bars"></i>
         <ul class="nav__links">
             <li><a href="#abt" class="nav__link nav__home">About</a></li>
             <li><a href="#sk" class="nav__link nav__about">Skill</a></li>
@@ -198,6 +206,7 @@
                     <span class="link">tranledangkhoa91@gmail.com</span>
                 </div>
             </div>
+            <script src="./portfolio.js"></script>
     </footer>
 </body>
 

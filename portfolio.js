@@ -41,7 +41,6 @@ const sectionSkill = document.getElementById("sk");
 const logo = document.querySelector(".logo");
 const hideLogo = function (entries) {
   const [entry] = entries;
-  console.log(entry);
   if (!entry.isIntersecting) {
     logo.classList.add("logo--hidden");
   } else {
@@ -190,3 +189,81 @@ document.addEventListener("keydown", function (e) {
     closeError();
   }
 });
+//music player
+const songs = [
+  "DrunkGroove",
+  "ThoiKhongSaiLech",
+  "YoruNiKakeru",
+  "MotGiacMongXua",
+];
+let songIndex = 0;
+const songInfo = document.querySelector(".music__info");
+const play = document.querySelector(".logo__player");
+const previous = document.querySelector(".player--previous");
+const next = document.querySelector(".player--next");
+const audio = document.getElementById("music");
+const songTitle = document.querySelector(".music__info");
+const amountOfSong = songs.length;
+
+const loadSong = function (song) {
+  songInfo.textContent = song;
+  audio.src = `./music/${song}.mp3`;
+};
+const autoNextSong = function () {
+  audio.addEventListener("ended", nextSong);
+};
+const playSong = function () {
+  play.classList.remove("player--deactive");
+  previous.classList.remove("hidden");
+  next.classList.remove("hidden");
+  songTitle.classList.remove("logo--hidden");
+  audio.play();
+};
+const pauseSong = function () {
+  play.classList.add("player--deactive");
+  previous.classList.add("hidden");
+  next.classList.add("hidden");
+  songTitle.classList.add("logo--hidden");
+  audio.pause();
+};
+const nextSong = function () {
+  songIndex++;
+  if (songIndex > amountOfSong - 1) {
+    songIndex = 0;
+  }
+  loadSong(songs[songIndex]);
+  fetchAndPlaySong();
+};
+
+const previousSong = function () {
+  songIndex--;
+  if (songIndex < 0) {
+    songIndex = amountOfSong - 1;
+  }
+  loadSong(songs[songIndex]);
+  fetchAndPlaySong();
+};
+const fetchAndPlaySong = function () {
+  fetch(audio.src)
+    .then((response) => response.blob())
+    .then((blob) => {
+      audio.srcObject = blob;
+      return audio.play();
+    })
+    .then((_) => {
+      playSong();
+    })
+    .catch((e) => {
+      playSong();
+    });
+};
+next.addEventListener("click", nextSong);
+previous.addEventListener("click", previousSong);
+logo.addEventListener("click", function () {
+  loadSong(songs[songIndex]);
+  const isPlaying = play.classList.contains("player--deactive");
+  if (isPlaying) {
+    playSong();
+  } else pauseSong();
+});
+autoNextSong();
