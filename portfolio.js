@@ -42,9 +42,9 @@ const logo = document.querySelector(".logo");
 const hideLogo = function (entries) {
   const [entry] = entries;
   if (!entry.isIntersecting) {
-    logo.classList.add("logo--hidden");
+    logo.classList.add("hidden__logo");
   } else {
-    logo.classList.remove("logo--hidden");
+    logo.classList.remove("hidden__logo");
   }
 };
 const obsOptions = {
@@ -219,14 +219,14 @@ const playSong = function () {
   play.classList.remove("player--deactive");
   previous.classList.remove("hidden__btn");
   next.classList.remove("hidden__btn");
-  songTitle.classList.remove("logo--hidden");
+  songTitle.classList.remove("hidden__logo");
   audio.play();
 };
 const pauseSong = function () {
   play.classList.add("player--deactive");
   previous.classList.add("hidden__btn");
   next.classList.add("hidden__btn");
-  songTitle.classList.add("logo--hidden");
+  songTitle.classList.add("hidden__logo");
   audio.pause();
 };
 const nextSong = function () {
