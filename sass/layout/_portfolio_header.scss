@@ -57,6 +57,7 @@ header {
       height: 5vh;
       .music__info {
         margin: auto;
+        font-size: 2rem;
       }
     }
   }
@@ -157,6 +158,9 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        .music__info {
+          font-size: 1.4rem;
+        }
       }
     }
   }

@@ -61,7 +61,8 @@ header {
       display: flex;
       height: 5vh; }
       header .logo .music__player .music__info {
-        margin: auto; }
+        margin: auto;
+        font-size: 2rem; }
   header .nav__icon {
     display: none; }
   header .nav__links {
@@ -138,7 +139,9 @@ header .active {
       flex: 1;
       display: flex;
       justify-content: center;
-      align-items: center; } }
+      align-items: center; }
+      header .logo .music__player .music__info {
+        font-size: 1.4rem; } }
 
 .hidden__btn {
   opacity: 0; }
@@ -534,11 +537,17 @@ header .active {
   display: flex;
   justify-content: space-evenly;
   align-items: center; }
-  .contact__links .contact__link {
+  .contact__links .contact__link .facebook__link {
     cursor: pointer; }
-    .contact__links .contact__link .link {
-      color: #171933;
-      text-decoration: none; }
+  .contact__links .contact__link .github__link {
+    cursor: pointer; }
+  .contact__links .contact__link .phone__link {
+    cursor: copy; }
+  .contact__links .contact__link .email__link {
+    cursor: copy; }
+  .contact__links .contact__link .link {
+    color: #171933;
+    text-decoration: none; }
 
 @media screen and (max-width: 576px) {
   .contact__form {

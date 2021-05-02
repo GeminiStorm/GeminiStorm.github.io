@@ -190,7 +190,14 @@ document.addEventListener("keydown", function (e) {
   }
 });
 //music player
-const songs = ["DrunkGroove", "ThoiKhongSaiLech", "YoruNiKakeru"];
+const songs = [
+  "Drunk Groove",
+  "ThoiKhongSaiLech",
+  "Yoru Ni Kakeru",
+  "GapNhungKoOLai",
+  "NhuMuaTuyetDauTien",
+  "BietKhucChoNhau",
+];
 let songIndex = 0;
 const songInfo = document.querySelector(".music__info");
 const play = document.querySelector(".logo__player");
