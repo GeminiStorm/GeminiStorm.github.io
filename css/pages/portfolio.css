@@ -32,7 +32,7 @@ header {
       text-align: center; }
       header .logo .logo__container .logo__player {
         backface-visibility: hidden;
-        transition: transform 0.3s ease-in; }
+        transition: transform 0.5s ease-in; }
       header .logo .logo__container .player--previous {
         width: 5rem;
         height: 5vh;
@@ -122,9 +122,6 @@ header .active {
   justify-content: space-evenly;
   height: 40vh; }
 
-.logo--hidden {
-  visibility: hidden !important; }
-
 @media screen and (max-width: 1024px) {
   header .logo {
     display: flex; }
@@ -145,6 +142,9 @@ header .active {
 
 .hidden__btn {
   opacity: 0; }
+
+.logo--hidden {
+  opacity: 0 !important; }
 
 .about {
   width: 90vw;

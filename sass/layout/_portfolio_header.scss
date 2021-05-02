@@ -21,7 +21,7 @@ header {
       text-align: center;
       .logo__player {
         backface-visibility: hidden;
-        transition: transform 0.3s ease-in;
+        transition: transform 0.5s ease-in;
       }
       .player--previous {
         width: 5rem;
@@ -136,9 +136,7 @@ header {
     height: 40vh;
   }
 }
-.logo--hidden {
-  visibility: hidden !important;
-}
+
 @include desktopFirst($lg) {
   header {
     .logo {
@@ -167,4 +165,7 @@ header {
 }
 .hidden__btn {
   opacity: 0;
+}
+.logo--hidden {
+  opacity: 0 !important;
 }
