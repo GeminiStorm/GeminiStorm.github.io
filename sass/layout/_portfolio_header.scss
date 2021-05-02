@@ -30,12 +30,14 @@ header {
         cursor: pointer;
         margin-right: 2rem;
         margin-bottom: 1rem;
+        transition: all 0.5s ease-in;
       }
       .player--next {
         backface-visibility: hidden;
         cursor: pointer;
         margin-left: 2rem;
         margin-bottom: 1rem;
+        transition: all 0.5s ease-in;
       }
       .player--deactive {
         transform: rotate(30deg) translate(30%);
@@ -71,21 +73,27 @@ header {
   header {
     display: flex;
     .logo {
+      flex: 10;
       .logo__container {
-        text-align: start;
-        flex: 2;
-        width: 50vw;
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
         .player--previous {
-          margin: 0;
+          flex: 1;
+        }
+        .logo__text {
+          margin-top: 0.5rem;
+          flex: 2;
         }
         .player--next {
-          margin: 0;
+          flex: 1;
         }
       }
       .music__player {
+        width: 0;
         flex: 1;
         .music__info {
-          font-size: 1.5rem;
+          opacity: 0;
         }
       }
     }

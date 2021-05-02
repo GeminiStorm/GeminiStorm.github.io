@@ -516,6 +516,9 @@
 .hidden {
   display: none;
 }
+.hidden__btn {
+  opacity: 0;
+}
 .overlay {
   position: fixed;
   top: 0;

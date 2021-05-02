@@ -199,6 +199,7 @@ const next = document.querySelector(".player--next");
 const audio = document.getElementById("music");
 const songTitle = document.querySelector(".music__info");
 const amountOfSong = songs.length;
+const logoText = document.querySelector(".logo__text");
 
 const loadSong = function (song) {
   songInfo.textContent = song;
@@ -209,15 +210,15 @@ const autoNextSong = function () {
 };
 const playSong = function () {
   play.classList.remove("player--deactive");
-  previous.classList.remove("hidden");
-  next.classList.remove("hidden");
+  previous.classList.remove("hidden__btn");
+  next.classList.remove("hidden__btn");
   songTitle.classList.remove("logo--hidden");
   audio.play();
 };
 const pauseSong = function () {
   play.classList.add("player--deactive");
-  previous.classList.add("hidden");
-  next.classList.add("hidden");
+  previous.classList.add("hidden__btn");
+  next.classList.add("hidden__btn");
   songTitle.classList.add("logo--hidden");
   audio.pause();
 };
