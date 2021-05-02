@@ -212,6 +212,7 @@ const loadSong = function (song) {
   songInfo.textContent = song;
   audio.src = `./music/${song}.mp3`;
 };
+audio.src = `./music/${songs[songIndex]}.mp3`;
 const autoNextSong = function () {
   audio.addEventListener("ended", nextSong);
 };
@@ -263,7 +264,7 @@ const fetchAndPlaySong = function () {
 next.addEventListener("click", nextSong);
 previous.addEventListener("click", previousSong);
 logoText.addEventListener("click", function () {
-  loadSong(songs[songIndex]);
+  songInfo.textContent = songs[songIndex];
   const isPlaying = play.classList.contains("player--deactive");
   if (isPlaying) {
     playSong();
