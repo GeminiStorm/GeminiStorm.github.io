@@ -255,7 +255,7 @@ const fetchAndPlaySong = function () {
 };
 next.addEventListener("click", nextSong);
 previous.addEventListener("click", previousSong);
-logo.addEventListener("click", function () {
+logoText.addEventListener("click", function () {
   loadSong(songs[songIndex]);
   const isPlaying = play.classList.contains("player--deactive");
   if (isPlaying) {
