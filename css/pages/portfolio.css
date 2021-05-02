@@ -124,7 +124,7 @@ header .active {
       flex: 1; } }
 
 .about {
-  max-width: 90vw;
+  width: 90vw;
   height: 100vh;
   margin: auto;
   display: grid;
@@ -530,9 +530,23 @@ header .active {
     .contact__form .input {
       width: 90%; }
   .contact__links {
-    margin-top: 0; }
-  .link {
-    display: none; } }
+    display: grid;
+    height: 10vh;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    margin: auto; }
+    .contact__links .facebook__link {
+      grid-row: 1/2;
+      grid-column: 1/2; }
+    .contact__links .github__link {
+      grid-row: 2/3;
+      grid-column: 1/2; }
+    .contact__links .phone__link {
+      grid-row: 1/2;
+      grid-column: 2/3; }
+    .contact__links .email__link {
+      grid-row: 2/3;
+      grid-column: 2/3; } }
 
 @media screen and (max-width: 1024px) {
   .contact__form {
@@ -583,4 +597,5 @@ body {
   line-height: 1.5;
   font-size: 2rem;
   color: white;
-  background-color: #171933; }
+  background-color: #171933;
+  overflow-x: hidden; }
