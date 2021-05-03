@@ -565,7 +565,8 @@ header .active {
     height: auto;
     align-items: flex-start; }
     .contact__links .contact__link {
-      margin-left: 5vh; } }
+      margin-left: 5vh;
+      padding: 0.5rem; } }
 
 @media screen and (max-width: 1024px) {
   .contact__form {
