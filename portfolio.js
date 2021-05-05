@@ -191,7 +191,7 @@ document.addEventListener("keydown", function (e) {
 });
 //music player
 const songs = [
-  "Hello VietNam",
+  "Aloha",
   "ThoiKhongSaiLech",
   "Yoru Ni Kakeru",
   "GapNhungKoOLai",
