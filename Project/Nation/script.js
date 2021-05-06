@@ -6,6 +6,12 @@ const countriesContainer = document.querySelector(".countries");
 // const inputCountry = document.getElementById("input");
 const listCountry = document.querySelector(".list-country");
 let loading = `<div class="loading"></div>`;
+const enableBtn = function () {
+  btn.disabled = false;
+};
+const disableBtn = function () {
+  btn.disabled = true;
+};
 // display ìnformation
 const displayCountry = function (country, className = "") {
   const html = `<article class="country ${className}">
@@ -28,7 +34,6 @@ const displayError = function (text) {
 //fetch data from rest Country
 const getNationData = function (nation) {
   countriesContainer.innerHTML = loading;
-  btn.disabled = true;
   fetch(`https://restcountries.eu/rest/v2/name/${nation}`)
     .then(function (response) {
       if (!response.ok) {
@@ -51,13 +56,11 @@ const getNationData = function (nation) {
           .then(function (data2) {
             const neighborData = data2;
             displayCountry(neighborData, "neighbour");
-            btn.disabled = false;
           });
       });
     })
     .catch(function (err) {
       countriesContainer.innerHTML = "";
-      btn.disabled = false;
       return displayError(err);
     })
     .finally(() => {
@@ -90,16 +93,14 @@ function initialize(countriesData) {
 // console.log(listCountry.selectedIndex);
 listCountry.addEventListener("change", function (e) {
   selectedCountry = this[e.target.selectedIndex].value;
+  enableBtn();
 });
 
 // function newCountrySelection(event) {
 //   console.log(event.target.value);
 // }
-// const enableBtn = function () {
-//   btn.disabled = false;
-// };
+
 btn.addEventListener("click", function () {
+  disableBtn();
   getNationData(selectedCountry);
-  // ;
-  // setTimeout(enableBtn, 3000);
 });
