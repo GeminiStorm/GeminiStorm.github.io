@@ -93,7 +93,7 @@ const enableBtn = function () {
 btn.addEventListener("click", function () {
   getNationData(selectedCountry);
   btn.disabled = true;
-  setTimeout(enableBtn, 2000);
+  setTimeout(enableBtn, 3000);
 });
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
