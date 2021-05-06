@@ -8,7 +8,6 @@ const listCountry = document.querySelector(".list-country");
 let loading = `<div class="loading"></div>`;
 // display ìnformation
 const displayCountry = function (country, className = "") {
-  countriesContainer.innerHTML = "";
   const html = `<article class="country ${className}">
     <img class="country__img" src="${country.flag}" />
     <div class="country__data">
@@ -39,6 +38,7 @@ const getNationData = function (nation) {
     .then(function (data) {
       const nationData = data[0];
       const neighborsCode = nationData.borders;
+      countriesContainer.innerHTML = "";
       displayCountry(nationData);
       if (!neighborsCode) throw new Error("Neighbor not found");
       return neighborsCode;
