@@ -139,6 +139,14 @@ body {
   margin: auto;
   visibility: visible;
   animation: spin 1s infinite linear;
+  z-index: 11;
+}
+.overlay {
+  z-index: 10;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vh;
 }
 @keyframes spin {
   from {
