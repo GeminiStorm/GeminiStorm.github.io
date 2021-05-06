@@ -51,16 +51,17 @@ const getNationData = function (nation) {
           .then(function (data2) {
             const neighborData = data2;
             displayCountry(neighborData, "neighbour");
+            btn.disabled = false;
           });
       });
     })
     .catch(function (err) {
       countriesContainer.innerHTML = "";
+      btn.disabled = false;
       return displayError(err);
     })
     .finally(() => {
       countriesContainer.style.opacity = 1;
-      btn.disabled = false;
     });
 };
 //starting country
