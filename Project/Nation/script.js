@@ -54,7 +54,10 @@ const getNationData = function (nation) {
           });
       });
     })
-    .catch((err) => displayError(err))
+    .catch(function (err) {
+      countriesContainer.innerHTML = "";
+      return displayError(err);
+    })
     .finally(() => {
       countriesContainer.style.opacity = 1;
       btn.disabled = false;
