@@ -5,8 +5,10 @@ const btn = document.querySelector(".btn-country");
 const countriesContainer = document.querySelector(".countries");
 // const inputCountry = document.getElementById("input");
 const listCountry = document.querySelector(".list-country");
+let loading = `<div class="loading"></div>`;
 // display ìnformation
 const displayCountry = function (country, className = "") {
+  countriesContainer.innerHTML = "";
   const html = `<article class="country ${className}">
     <img class="country__img" src="${country.flag}" />
     <div class="country__data">
@@ -26,7 +28,7 @@ const displayError = function (text) {
 };
 //fetch data from rest Country
 const getNationData = function (nation) {
-  countriesContainer.innerHTML = "";
+  countriesContainer.innerHTML = loading;
   fetch(`https://restcountries.eu/rest/v2/name/${nation}`)
     .then(function (response) {
       if (!response.ok) {
@@ -87,6 +89,8 @@ listCountry.addEventListener("change", function (e) {
 // }
 btn.addEventListener("click", function () {
   getNationData(selectedCountry);
+  loading.classList.add("active");
+  setTimeout(() => loading.classList.remove("active"), 2000);
 });
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {

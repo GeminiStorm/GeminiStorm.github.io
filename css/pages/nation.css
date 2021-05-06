@@ -111,3 +111,19 @@ body {
 .list-country {
   width: 30rem;
   border-radius: 0.7rem; }
+
+.loading {
+  width: 5rem;
+  height: 5rem;
+  border: 5px solid #f3f3f3;
+  border-top: 6px solid orangered;
+  border-radius: 100%;
+  margin: auto;
+  visibility: visible;
+  animation: spin 1s infinite linear; }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
