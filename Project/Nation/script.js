@@ -1,7 +1,7 @@
 "use strict";
 let countries;
 let selectedCountry;
-const btn = document.querySelector(".btn-country");
+const btn = document.getElementById("btn");
 const countriesContainer = document.querySelector(".countries");
 // const inputCountry = document.getElementById("input");
 const listCountry = document.querySelector(".list-country");
@@ -87,10 +87,13 @@ listCountry.addEventListener("change", function (e) {
 // function newCountrySelection(event) {
 //   console.log(event.target.value);
 // }
+const enableBtn = function () {
+  btn.disabled = false;
+};
 btn.addEventListener("click", function () {
   getNationData(selectedCountry);
-  loading.classList.add("active");
-  setTimeout(() => loading.classList.remove("active"), 2000);
+  btn.disabled = true;
+  setTimeout(enableBtn, 2000);
 });
 document.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
