@@ -109,7 +109,5 @@ body {
   font-size: 1.5rem; }
 
 .list-country {
-  width: 35rem;
+  width: 30rem;
   border-radius: 0.7rem; }
-  .list-country option {
-    width: 29rem; }
