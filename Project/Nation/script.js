@@ -28,6 +28,7 @@ const displayError = function (text) {
 //fetch data from rest Country
 const getNationData = function (nation) {
   countriesContainer.innerHTML = loading;
+  btn.disabled = true;
   fetch(`https://restcountries.eu/rest/v2/name/${nation}`)
     .then(function (response) {
       if (!response.ok) {
@@ -39,7 +40,6 @@ const getNationData = function (nation) {
       const nationData = data[0];
       const neighborsCode = nationData.borders;
       countriesContainer.innerHTML = "";
-      btn.disabled = false;
       displayCountry(nationData);
       if (!neighborsCode) throw new Error("Neighbor not found");
       return neighborsCode;
@@ -57,7 +57,7 @@ const getNationData = function (nation) {
     .catch((err) => displayError(err))
     .finally(() => {
       countriesContainer.style.opacity = 1;
-      btn.disabled = true;
+      btn.disabled = false;
     });
 };
 //starting country
