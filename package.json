@@ -19,11 +19,11 @@
   "homepage": "https://github.com/GeminiStorm/GeminiStorm.github.io#readme",
   "devDependencies": {
     "del": "^6.0.0",
-    "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
     "node-sass": "^5.0.0"
   },
   "dependencies": {
+    "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
     "particles.js": "^2.0.0"
   },
