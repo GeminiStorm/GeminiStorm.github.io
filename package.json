@@ -5,7 +5,8 @@
   "main": "landing.js",
   "scripts": {
     "scss": "gulp styles",
-    "watch": "gulp watch"
+    "watch": "gulp watch",
+    "build": "npx parcel index.html"
   },
   "repository": {
     "type": "git",
