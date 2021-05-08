@@ -1,4 +1,5 @@
 "use strict";
+let selectedCountry;
 const btn = document.getElementById("btn");
 const countriesContainer = document.querySelector(".countries");
 const listCountry = document.querySelector(".list-country");
@@ -55,7 +56,6 @@ const displayError = function (text) {
 };
 //fetch data from rest Country
 const countryInfor = async function (country) {
-  countriesContainer.style.opacity = 1;
   countriesContainer.innerHTML = loading;
   try {
     const fetchCountryInfor = await fetch(
@@ -81,18 +81,18 @@ const countryInfor = async function (country) {
       );
     });
   } catch (err) {
-    countriesContainer.style.opacity = 1;
     countriesContainer.innerHTML = "";
     displayError(err);
   }
 };
 //fetch all data country to select
-let selectedCountry;
 listCountry.addEventListener("change", function (e) {
   selectedCountry = this[e.target.selectedIndex].value;
   enableBtn();
 });
 btn.addEventListener("click", function () {
   disableBtn();
-  countryInfor(selectedCountry);
+  countryInfor(selectedCountry).finally(
+    () => (countriesContainer.style.opacity = 1)
+  );
 });
