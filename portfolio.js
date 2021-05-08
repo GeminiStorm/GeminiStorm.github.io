@@ -120,7 +120,6 @@ document.addEventListener("keydown", function (e) {
     closeModal1();
   }
 });
-
 const modal2 = document.querySelector(".project2__modal");
 const btnCloseModal2 = document.querySelector(".modal2__close");
 const btnOpenModal2 = document.querySelector(".project2__popup");
