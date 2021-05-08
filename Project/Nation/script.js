@@ -1,9 +1,6 @@
 "use strict";
-let countries;
-let selectedCountry;
 const btn = document.getElementById("btn");
 const countriesContainer = document.querySelector(".countries");
-// const inputCountry = document.getElementById("input");
 const listCountry = document.querySelector(".list-country");
 let loading = `<div class="loading"></div>`;
 const enableBtn = function () {
@@ -12,6 +9,31 @@ const enableBtn = function () {
 const disableBtn = function () {
   btn.disabled = true;
 };
+// get and  choose country list
+const displayCountryList = function (countriesData) {
+  let options = "";
+  countriesData.forEach(
+    (country) =>
+      (options += `<option value="${country.name}">${country.name}</option>`)
+  );
+  listCountry.innerHTML = options;
+  listCountry.selectedIndex = -1;
+};
+const countryList = async function () {
+  try {
+    const fetchCountryListName = await fetch(
+      "https://restcountries.eu/rest/v2/all?fields=name"
+    );
+    if (!fetchCountryListName) {
+      throw new Error("Problem getting country!");
+    }
+    const dataCountryListName = await fetchCountryListName.json();
+    displayCountryList(dataCountryListName);
+  } catch (err) {
+    displayError(err);
+  }
+};
+countryList();
 // display ìnformation
 const displayCountry = function (country, className = "") {
   const html = `<article class="country ${className}">
@@ -32,75 +54,45 @@ const displayError = function (text) {
   countriesContainer.insertAdjacentHTML("beforeend", text);
 };
 //fetch data from rest Country
-const getNationData = function (nation) {
+const countryInfor = async function (country) {
+  countriesContainer.style.opacity = 1;
   countriesContainer.innerHTML = loading;
-  fetch(`https://restcountries.eu/rest/v2/name/${nation}`)
-    .then(function (response) {
-      if (!response.ok) {
-        throw new Error("Country not found");
-      }
-      return response.json();
-    })
-    .then(function (data) {
-      const nationData = data[0];
-      const neighborsCode = nationData.borders;
-      countriesContainer.innerHTML = "";
-      displayCountry(nationData);
-      if (!neighborsCode) throw new Error("Neighbor not found");
-      return neighborsCode;
-    })
-    .then(function (fromNeighborCode) {
-      fromNeighborCode.forEach((code) => {
-        fetch(`https://restcountries.eu/rest/v2/alpha/${code}`)
-          .then((response2) => response2.json())
-          .then(function (data2) {
-            const neighborData = data2;
-            displayCountry(neighborData, "neighbour");
-          });
-      });
-    })
-    .catch(function (err) {
-      countriesContainer.innerHTML = "";
-      return displayError(err);
-    })
-    .finally(() => {
-      countriesContainer.style.opacity = 1;
+  try {
+    const fetchCountryInfor = await fetch(
+      `https://restcountries.eu/rest/v2/name/${country}`
+    );
+    if (!fetchCountryInfor.ok) {
+      throw new Error("Country not found");
+    }
+    const dataCountryArr = await fetchCountryInfor.json();
+    countriesContainer.innerHTML = "";
+    const dataCountryObj = dataCountryArr[0];
+    displayCountry(dataCountryObj);
+    const neighborsCode = dataCountryObj.borders;
+    if (neighborsCode.length === 0) displayError(`${country} has no neighbor`);
+    neighborsCode.forEach(async function (code) {
+      const fetchCode = await fetch(
+        `https://restcountries.eu/rest/v2/alpha/${code}`
+      );
+      const dataCode = await fetchCode.json();
+      countriesContainer.addEventListener(
+        "load",
+        displayCountry(dataCode, "neighbour")
+      );
     });
+  } catch (err) {
+    countriesContainer.style.opacity = 1;
+    countriesContainer.innerHTML = "";
+    displayError(err);
+  }
 };
-//starting country
-
 //fetch all data country to select
-fetch("https://restcountries.eu/rest/v2/all?fields=name")
-  .then((res) => res.json())
-
-  .then((data) => initialize(data))
-  .catch((err) => console.log("Error:", err));
-function initialize(countriesData) {
-  countries = countriesData;
-  let options = "";
-  countries.forEach(
-    (country) =>
-      (options += `<option value="${country.name}">${country.name}</option>`)
-  );
-  listCountry.innerHTML = options;
-
-  listCountry.selectedIndex = -1;
-}
-// const selectCountry = function () {
-//   listCountry.innerHTML = options;
-//   displayCountryInfo(countriesList[countriesList.selectedIndex].value);;
-// };
-// console.log(listCountry.selectedIndex);
+let selectedCountry;
 listCountry.addEventListener("change", function (e) {
   selectedCountry = this[e.target.selectedIndex].value;
   enableBtn();
 });
-
-// function newCountrySelection(event) {
-//   console.log(event.target.value);
-// }
-
 btn.addEventListener("click", function () {
   disableBtn();
-  getNationData(selectedCountry);
+  countryInfor(selectedCountry);
 });
