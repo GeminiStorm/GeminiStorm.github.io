@@ -20,7 +20,8 @@ const displayCountryList = function (countriesData) {
   listCountry.innerHTML = options;
   listCountry.selectedIndex = -1;
 };
-const countryList = async function () {
+//IIFE to display country list
+(async function () {
   try {
     const fetchCountryListName = await fetch(
       "https://restcountries.eu/rest/v2/all?fields=name"
@@ -33,8 +34,7 @@ const countryList = async function () {
   } catch (err) {
     displayError(err);
   }
-};
-countryList();
+})();
 // display ìnformation
 const displayCountry = function (country, className = "") {
   const html = `<article class="country ${className}">
