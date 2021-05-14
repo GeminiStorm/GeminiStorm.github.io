@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="393da1c99c7696e06e054a188d08ebce">
+  <script defer="" src="4a34131d24876b38950e544612300cf1"></script>
+  <title>Country Generator</title>
+</head>
+
+<body>
+  <main class="container">
+    <button id="btn" class="btn-country">Generate</button>
+    <!-- <label for="input">Country</label>
+    <input placeholder="enter your country" name="input" id="input" type="text"> -->
+    <label class="label-country" for="nt">Country List</label>
+    <select id="nt" class="list-country" name="nation">
+    </select>
+    <div class="countries">
+    </div>
+    <div class="images"></div>
+  </main>
+</body>
+
+</html>

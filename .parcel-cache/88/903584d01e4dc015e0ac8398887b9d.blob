@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>welcome page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="50753874a7638a1925d6fd23f870681e">
+  <link rel="stylesheet" href="9146a76771a646189051f88362b5a1fb" type="text/css">
+  <link rel="stylesheet" type="text/css" href="7c537667280f7f6c3690bbeda699e57d">
+  <link href="bf0c1cde95762ad401a8816bacb37b12" rel="stylesheet">
+  <script defer="" src="63576b8f45ff78318cde492d56a2814a"></script>
+  <script defer="" src="f2f8a22bcff0afc2e0d4c9e559c00b60"></script>
+  <script defer="" type="text/javascript" src="6e03fc8f7755e0659099adc26d0d3fc6"></script>
+</head>
+
+<body>
+  <div class="second-wrapper">
+    <div class="circle-loader">
+      <div class="circle circle_four"></div>
+      <div class="circle circle_three"></div>
+      <div class="circle circle_two"></div>
+      <div class="circle circle_one"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="count-particles">
+      <span class="js-count-particles"></span>
+    </div>
+    <div id="particles-js"></div>
+    <div class="title-wrapper">
+      <div class="title">
+        <h1 class="title title--big">I'm Đăng Khoa</h1>
+        <h3 class="title title--small">personal portfolio</h3>
+      </div>
+      <a class="btn btn--blue" href="88721db77f59eb9e3b580a3489ee7b87" target="_self"> Welcome
+      </a>
+      <i class=" arrow fas fa-hand-pointer">click me!</i>
+    </div>
+  </div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+</body>
+
+</html>

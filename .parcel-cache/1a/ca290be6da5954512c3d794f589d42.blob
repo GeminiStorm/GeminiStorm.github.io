@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>welcome page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/career__portfolio__suitcase_generated.HASH_REF_7c106b28c81d437c3771b77c69e67286.jpg">
+  <link rel="stylesheet" href="/index.HASH_REF_2f156bd3ee21959a019fe1d06dbfb133.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="/index.HASH_REF_6f3a462dba2840570a5a10228cb0cffb.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap" rel="stylesheet">
+  <script defer="" src="/index.HASH_REF_1562e1508f4ecf3b9e6f50da81232108.js"></script>
+  <script defer="" src="/index.HASH_REF_147c3be9838f78fc816d5dfc1397955d.js"></script>
+  <script defer="" type="text/javascript" src="/index.HASH_REF_62d5dab885897b04655082d4fd532818.js"></script>
+</head>
+
+<body>
+  <div class="second-wrapper">
+    <div class="circle-loader">
+      <div class="circle circle_four"></div>
+      <div class="circle circle_three"></div>
+      <div class="circle circle_two"></div>
+      <div class="circle circle_one"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="count-particles">
+      <span class="js-count-particles"></span>
+    </div>
+    <div id="particles-js"></div>
+    <div class="title-wrapper">
+      <div class="title">
+        <h1 class="title title--big">I'm Đăng Khoa</h1>
+        <h3 class="title title--small">personal portfolio</h3>
+      </div>
+      <a class="btn btn--blue" href="/Portfolio.html" target="_self"> Welcome
+      </a>
+      <i class=" arrow fas fa-hand-pointer">click me!</i>
+    </div>
+  </div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
+</body>
+
+</html>
