@@ -10,8 +10,9 @@
     <link rel="icon" href="./img/career__portfolio__suitcase_generated.jpg">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script defer src="portfolio.js"></script>
+    <script defer src="aos.js"></script>
     <title>Portfolio</title>
 
 
@@ -40,7 +41,7 @@
     </header>
     <main>
         <section id="abt" class="about">
-            <div class="intro__title">
+            <div data-aos="fade-up" class="intro__title">
                 <h2 class="title__header">About me</h2>
                 <i class="title__contain"> I'm a <span class="highlight">Web Developer</span>
                     from HCM-Việt Nam, I have
@@ -58,31 +59,34 @@
                 </div>
 
             </div>
-            <div class="intro__avt">
+            <div data-aos="fade-up" class="intro__avt">
                 <picture class="avt__pic">
                     <source media="(max-width:605px)" srcset="/img/bi-461x615.jpg">
                     <img class="avt__img" src="/img/bi-1536x2048.jpg" alt="Dang Khoa">
                 </picture>
             </div>
         </section>
-        <section id="sk" class="skill">
-            <h2 class="skill__title">What can I do</h2>
-            <div class="skill__btn">
+        <!-- AOS -->
+        <section data-aos="fade-up" id="sk" class="skill">
+            <h2 data-aos="fade-up" class="skill__title ">What can I do</h2>
+            <div data-aos="fade-up" class="skill__btn ">
                 <button data-type="design" class="btn btn__design"><span>01</span>Design</button>
                 <button data-type="web" class="btn btn__web"><span>02</span>Develop</button>
                 <button data-type="mobile" class="btn btn__mobile"><span>03</span>Responsive</button>
             </div>
-            <div class="skill__description">
-                <div class="description0 description description__design description--active">
+            <div data-aos="fade-up" class="skill__description ">
+                <div class=" description0 description description__design description--active">
                     <div class="progress--bar"></div>
-                    <h3><span class="fas fa-palette"></span>Let me design your website</h3>
+                    <h3><span class="fas fa-palette"></span>Let me design your website
+                    </h3>
                     <p>
                         I design simple content structure, clean design patterns, and thoughtful interactions.
                     </p>
                 </div>
-                <div class="description1 description description__web">
+                <div class=" description1 description description__web">
                     <div class="progress--bar"></div>
-                    <h3><span class="fas fa-pencil-ruler"></span>Develope and maintain your website</h3>
+                    <h3><span class="fas fa-pencil-ruler"></span>Develope and maintain
+                        your website</h3>
                     <p>
                         I like to code things from scratch, and enjoy bringing ideas to life in the browser.
                     </p>
@@ -96,8 +100,8 @@
                 </div>
             </div>
             <div class="tools">
-                <h2 class="tools__title">My Helpers</h2>
-                <div class="tool__list">
+                <h2 data-aos="fade-up" class="tools__title">My Helpers</h2>
+                <div data-aos="fade-up" class="tool__list">
                     <div class="tool tool__coding">
                         <h4>HTML5/CSS3/JS</h4>
                         <img src="./img/html 1109pxl.png" alt="html5/css3/js">
@@ -119,9 +123,9 @@
         </section>
         <section id="prj" class="projects">
             <div class="overlay hidden"></div>
-            <h2 class="projects__title">My Projects</h2>
+            <h2 data-aos="fade-up" class="projects__title">My Projects</h2>
             <div class="projects__list">
-                <div class="project project1">
+                <div data-aos="fade-up" class="project project1">
                     <div class="project1__modal hidden">
                         <button class="modal1__close fas fa-times fa-lg"></button>
                         <h4 class="modal1__title">Country Generator</h4>
@@ -138,7 +142,7 @@
                         <i class="project__popup project1__popup">Here</i> to
                         read the instruction.</p>
                 </div>
-                <div class="project project2">
+                <div data-aos="fade-up" class="project project2">
                     <div class="project2__modal hidden">
                         <button class="modal2__close fas fa-times fa-lg"></button>
                         <h4 class="modal2__title">Perfume</h4>
@@ -159,7 +163,7 @@
     </main>
     <footer>
         <div id="ct" class="container_form">
-            <form class="contact__form" action="">
+            <form data-aos="fade-up" class="contact__form" action="">
                 <div class="contact__error hidden">
                     <i class="error__close fas fa-times"></i>
                     <p class="error__text">This function is under development, please email or message me instead,
@@ -201,8 +205,14 @@
                     <span class=>tranledangkhoa91@gmail.com</span>
                 </div>
             </div>
-            <!-- <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script> -->
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 600,
+            easing: 'ease-in-sine',
+        });
+    </script>
 </body>
 
 
