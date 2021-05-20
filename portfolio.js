@@ -189,14 +189,7 @@ document.addEventListener('keydown', function (e) {
   }
 })
 //music player
-const songs = [
-  'Aloha',
-  'ThoiKhongSaiLech',
-  'Yoru Ni Kakeru',
-  'GapNhungKoOLai',
-  'NhuMuaTuyetDauTien',
-  'BietKhucChoNhau',
-]
+const songs = ['Italian Afternoon', 'Winter Ride', 'Classical Carnivale']
 let songIndex = 0
 const songInfo = document.querySelector('.music__info')
 const play = document.querySelector('.logo__player')
