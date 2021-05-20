@@ -239,19 +239,9 @@ const previousSong = function () {
   loadSong(songs[songIndex])
   fetchAndPlaySong()
 }
-const fetchAndPlaySong = function () {
-  fetch(audio.src)
-    .then((response) => response.blob())
-    .then((blob) => {
-      audio.srcObject = blob
-      return audio.play()
-    })
-    .then((_) => {
-      playSong()
-    })
-    .catch((e) => {
-      playSong()
-    })
+const fetchAndPlaySong = async function () {
+  const res = await fetch(audio.src)
+  res && audio.play()
 }
 next.addEventListener('click', nextSong)
 previous.addEventListener('click', previousSong)
