@@ -240,8 +240,15 @@ const previousSong = function () {
   fetchAndPlaySong()
 }
 const fetchAndPlaySong = async function () {
-  const res = await fetch(audio.src)
-  res && audio.play()
+  try {
+    const res = await fetch(audio.src)
+    if (!res.ok) {
+      songInfo.textContent = 'audio not found'
+    }
+    res.ok && audio.play()
+  } catch (err) {
+    throw (songInfo.textContent = err.message)
+  }
 }
 next.addEventListener('click', nextSong)
 previous.addEventListener('click', previousSong)
